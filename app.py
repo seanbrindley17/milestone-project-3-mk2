@@ -18,8 +18,10 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-def hello():
-    return "Hello"
+@app.route("/get_entries")
+def get_entries():
+    entries = mongo.db.entries.find()
+    return render_template("entries.html", entries=entries)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwimTimes</title>
+</head>
+<body>
+    {% for entry in entries %}
+        {{ entry.stroke }}<br>
+        {{ entry.distance }}<br>
+        {{ entry.time }}<br>
+        {{ entry.date }}<br>
+        {{ entry.personal_best }}<br>
+    {% endfor %}
+</body>
+</html>
