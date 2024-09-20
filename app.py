@@ -27,6 +27,24 @@ def get_entries():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    if request.method == "POST":
+        existing_user = mongo.db.users.find_one(
+        {"username": request.form.get("username").lower()})
+            
+        if existing_user:
+            flash("Username already exists, please try another")
+            return redirect(url_for("register"))
+        
+        registered_user = {
+            "first_name": request.form.get("first_name"),
+            "last_name": request.form.get("last_name"),
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(registered_user)
+        
+        session["user"] = request.form.get("username").lower()
+        flash("Registration Successful")
     return render_template("register.html")
 
 
