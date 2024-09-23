@@ -3,15 +3,15 @@
 
 <h2>LOG IN</h2>
 
-<div class="row">
+<form class="row" method="POST" action="{{ url_for('login') }}">
     <!-- Username field-->
     <div class="input-field col s12">
-        <input placeholder="Username" name="username" id="username" type="text" class="validate white-text">
+        <input placeholder="Username" name="username" id="username" type="text" class="validate">
         <label for="username">Username</label>
     </div>
     <!-- Password field -->
     <div class="input-field col s12">
-        <input name="password" id="password" type="password" class="validate white-text">
+        <input name="password" id="password" type="password" class="validate">
         <label for="password">Password</label>
     </div>
     <!-- Register Button -->
@@ -20,6 +20,6 @@
             Log In
         </button>
     </div>
-</div>
+</form>
 
 {% endblock %}
