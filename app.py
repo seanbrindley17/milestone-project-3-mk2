@@ -35,6 +35,13 @@ def register():
             flash("Username already exists, please try another")
             return redirect(url_for("register"))
         
+        password = request.form.get("password")
+        confirm_password = request.form.get("confirm_password")
+        
+        if password != confirm_password:
+            flash("Passwords don't match")
+            return redirect(url_for("register"))
+        
         registered_user = {
             "first_name": request.form.get("first_name"),
             "last_name": request.form.get("last_name"),
