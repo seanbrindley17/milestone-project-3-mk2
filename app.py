@@ -52,6 +52,7 @@ def register():
         
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful")
+        return redirect(url_for("get_entries"))
     return render_template("register.html")
 
 
