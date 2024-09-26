@@ -1,13 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for entry in entries %}
-        {{ entry.stroke }}<br>
-        {{ entry.distance }}<br>
-        {{ entry.time }}<br>
-        {{ entry.date }}<br>
-        {{ entry.personal_best }}<br>
-    {% endfor %}
 
     <div class="row">
         <div class="col s12">
@@ -20,24 +13,75 @@
         </div>
         <div id="freestyle-tab" class="col s12">
             Freestyle
-            <ul class="collapsible">
-                <li>
-                    <div class="collapsible-header"><i class="material-icons"></i>Test</div>
-                    <div class="collapsible-body"><span>Test</span></div>
-                </li>
-            </ul>
+            {% for entry in entries %}
+                {% if entry.stroke == "freestyle" %}
+                    <ul class="collapsible">
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons"></i>{{ entry.distance }} {{ entry.stroke }}: {{
+                                entry.time }}</div>
+                            <div class="collapsible-body">
+                                <span>{{ entry.date }}</span><br>
+                                {{ entry.personal_best }}<br>
+                            </div>
+                        </li>
+                    </ul>
+                {% endif %}
+            {% endfor %}
         </div>
-        <div id="backstroke-tab" class="col s12">Backstroke</div>
+
+        <div id="backstroke-tab" class="col s12">
+            Backstroke
+            {% for entry in entries %}
+                {% if entry.stroke == "backstroke" %}
+                    <ul class="collapsible">
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons"></i>{{ entry.distance }} {{ entry.stroke }}: {{
+                                entry.time }}</div>
+                            <div class="collapsible-body">
+                                <span>{{ entry.date }}</span><br>
+                                {{ entry.personal_best }}<br>
+                            </div>
+                        </li>
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
+        
         <div id="breaststroke-tab" class="col s12">
             Breaststroke
-            <ul class="collapsible">
-                <li>
-                    <div class="collapsible-header"><i class="material-icons"></i>Test</div>
-                    <div class="collapsible-body"><span>Test</span></div>
-                </li>
-            </ul>
+            {% for entry in entries %}
+                {% if entry.stroke == "breaststroke" %}
+                    <ul class="collapsible">
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons"></i>{{ entry.distance }} {{ entry.stroke }}: {{
+                                entry.time }}</div>
+                            <div class="collapsible-body">
+                                <span>{{ entry.date }}</span><br>
+                                {{ entry.personal_best }}<br>
+                            </div>
+                        </li>
+                    </ul>
+                {% endif %}
+            {% endfor %}
         </div>
-        <div id="butterfly-tab" class="col s12">Butterfly</div>
+        
+        <div id="butterfly-tab" class="col s12">
+            Butterfly
+            {% for entry in entries %}
+                {% if entry.stroke == "butterfly" %}
+                    <ul class="collapsible">
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons"></i>{{ entry.distance }} {{ entry.stroke }}: {{
+                                entry.time }}</div>
+                            <div class="collapsible-body">
+                                <span>{{ entry.date }}</span><br>
+                                {{ entry.personal_best }}<br>
+                            </div>
+                        </li>
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
     </div>
 
 {% endblock %}
