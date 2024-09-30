@@ -88,6 +88,11 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/add_new_entry")
+def add_new_entry():
+    return render_template("new_entry.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
