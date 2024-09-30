@@ -90,7 +90,8 @@ def logout():
 
 @app.route("/add_new_entry")
 def add_new_entry():
-    return render_template("new_entry.html")
+    strokes = mongo.db.strokes.find()
+    return render_template("new_entry.html", strokes=strokes)
 
 
 if __name__ == "__main__":
