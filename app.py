@@ -68,13 +68,13 @@ def login():
                 flash(f"Welcome back, {session["user"]}")
                 return redirect(url_for("get_entries"))
             
-            else:
-                flash("Incorrect username or password")
-                return redirect(url_for("login"))
             
-        else:
             flash("Incorrect username or password")
             return redirect(url_for("login"))
+            
+        
+        flash("Incorrect username or password")
+        return redirect(url_for("login"))
     
     return render_template("login.html")
 
