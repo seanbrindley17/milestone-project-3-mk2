@@ -4,4 +4,8 @@ $(document).ready(function(){
     $('.tabs').tabs();
     $('.collapsible').collapsible();
     $('select').formSelect();
+    $('.datepicker').datepicker({
+      format: "dd mmmm, yyyy",
+      showClearBtn: "true",
+    });
   });

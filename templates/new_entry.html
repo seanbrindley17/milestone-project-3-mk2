@@ -3,36 +3,45 @@
 {% block content %}
 
 <div class="row card">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s6">
-          <select name="stroke_name" id="stroke_name">
-            <option value="" disabled selected>-------</option>
-            {% for stroke in strokes %}
-              <option value="{{ stroke.stroke_name }}">{{ stroke.stroke_name }}</option>
-            {% endfor %}
-          </select>
-          <label for="stroke_name">Stroke</label>
-        </div>
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <select name="stroke_name" id="stroke_name">
+          <option value="" disabled selected>-------</option>
+          {% for stroke in strokes %}
+          <option value="{{ stroke.stroke_name }}">{{ stroke.stroke_name }}</option>
+          {% endfor %}
+        </select>
+        <label for="stroke_name">Stroke</label>
       </div>
-      
-      <div class="row">
-        <div class="input-field col s6">
-          <select name="stroke_name" id="stroke_name">
-            <option value="" disabled selected>-------</option>
-            {% for race_distance in distances %}
-              <option value="{{ race_distance.distance }}">{{ race_distance.distance }}</option>
-            {% endfor %}
-          </select>
-          <label for="stroke_name">Distance</label>
-        </div>
-      </div>
+    </div>
 
-      <div class="row">
-        <div class="input-field col s12"></div>
-        <input type="text" class="datepicker">
+    <div class="row">
+      <div class="input-field col s6">
+        <select name="stroke_name" id="stroke_name">
+          <option value="" disabled selected>-------</option>
+          {% for race_distance in distances %}
+          <option value="{{ race_distance.distance }}">{{ race_distance.distance }}</option>
+          {% endfor %}
+        </select>
+        <label for="stroke_name">Distance</label>
       </div>
-    </form>
-  </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6"></div>
+      <input id="swim_date" name="swim_date" type="text" class="datepicker">
+      <label for="swim_date">Date</label>
+    </div>
+
+    <div class="row">
+      <div class="col s6 center-align">
+        <button type="submit">
+          Add Time
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
 
 {% endblock %}
