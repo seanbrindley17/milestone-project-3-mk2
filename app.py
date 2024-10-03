@@ -90,8 +90,21 @@ def logout():
 
 @app.route("/add_new_entry")
 def add_new_entry():
+    if request.method == "POST":
+        entry = {
+            "stroke": request.form.get("stroke_name"),
+            "distance": request.form.get("race_distance"),
+            "time": request.form.get("swim_time"),
+            "date": request.form.get("swim_date"),
+            "created_by_user": session["user"]
+        }
+        mongo.db.entries.insert_one(entry)
+        flash("Time Added")
+        return redirect(url_for("entries.html"))
+    
     strokes = mongo.db.strokes.find()
-    return render_template("new_entry.html", strokes=strokes)
+    distances = mongo.db.distances.find()
+    return render_template("new_entry.html", strokes=strokes, distances=distances)
 
 
 if __name__ == "__main__":
