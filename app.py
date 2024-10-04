@@ -88,7 +88,7 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_new_entry")
+@app.route("/add_new_entry", methods=["GET", "POST"])
 def add_new_entry():
     if request.method == "POST":
         entry = {
@@ -100,7 +100,7 @@ def add_new_entry():
         }
         mongo.db.entries.insert_one(entry)
         flash("Time Added")
-        return redirect(url_for("entries.html"))
+        return redirect(url_for("get_entries"))
     
     strokes = mongo.db.strokes.find()
     distances = mongo.db.distances.find()
