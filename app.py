@@ -93,7 +93,7 @@ def add_new_entry():
     if request.method == "POST":
         entry = {
             "stroke": request.form.get("stroke_name"),
-            "distance": request.form.get("race_distance"),
+            "distance": request.form.get("distance"),
             "time": request.form.get("swim_time"),
             "date": request.form.get("swim_date"),
             "created_by_user": session["user"]
