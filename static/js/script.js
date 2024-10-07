@@ -8,4 +8,5 @@ $(document).ready(function(){
       format: "dd mmmm, yyyy",
       showClearBtn: "true",
     });
+    $('.modal').modal();
   });
