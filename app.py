@@ -111,7 +111,7 @@ def add_new_entry():
 def delete_entry(entry_id):
     mongo.db.entries.delete_one({"_id": ObjectId(entry_id)})
     flash("Deleted")
-    return render_template(url_for("get_entries"))
+    return redirect(url_for("get_entries"))
 
 
 if __name__ == "__main__":
