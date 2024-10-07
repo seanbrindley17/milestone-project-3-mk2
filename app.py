@@ -107,6 +107,13 @@ def add_new_entry():
     return render_template("new_entry.html", strokes=strokes, distances=distances)
 
 
+@app.route("/delete_entry/<entry_id>")
+def delete_entry(entry_id):
+    mongo.db.entries.delete_one({"_id": ObjectId(entry_id)})
+    flash("Deleted")
+    return render_template(url_for("get_entries"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
