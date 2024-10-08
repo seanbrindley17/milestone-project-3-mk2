@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-
+    
     <div class="row">
         <div class="col s12">
             <ul class="tabs">
@@ -13,35 +13,37 @@
         </div>
         
         
-
         <div id="freestyle-tab" class="col s12">
             Freestyle
             {% for entry in entries %}
                 {% if entry.stroke == "freestyle" %}
-                    <ul class="collapsible">
-                        <li>
-                            <div class="collapsible-header"><i class="material-icons"></i>{{ entry.distance }} {{ entry.stroke }}: {{
-                                entry.time }}
-                                <div class="col s2">
-                                    <a href="" class="waves-effect waves-light btn edit-button">Edit</a>
-                                    <a href="#modal1" class="waves-effect waves-light btn delete-button">Delete</a>
-                                    <div id="modal1" class="modal">
-                                        <div class="modal-content">
-                                            <h4>Modal Header</h4>
-                                            <p>A bunch of text</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <a href="{{ url_for('delete_entry', entry_id=entry._id) }}" class="modal-close waves-effect waves-green btn-flat modal-trigger">Delete</a>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="col s12 m4 offset-m4">
+                    <div class="card horizontal">
+                        <div class="card-stacked">
+                            <div class="card-content center-align">
+                                <div class="entry-date"><strong>{{ entry.date }}</strong></div><br>
+                                <div class="entry-details">{{ entry.distance }} {{ entry.stroke }}: {{ entry.time }}</div>
                             </div>
-                            <div class="collapsible-body">
-                                <span>{{ entry.date }}</span><br>
-                                {{ entry.personal_best }}<br>
+                            <div class="card-action center-align">
+                                <a href="#" class="">Edit</a>
+                                <a href="#delete-modal1" class="modal-trigger">Delete</a>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="delete-modal1" class="modal">
+                    <div class="modal-content center-align">
+                        <h4>Delete Entry</h4>
+                        <p>Are you sure you wish to delete this entry:</p>
+                        <em><div class="entry-date"><strong>{{ entry.date }}</strong></div><br>
+                        <div class="entry-details">{{ entry.distance }} {{ entry.stroke }}: {{ entry.time }}</div></em>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="{{ url_for('delete_entry', entry_id=entry._id) }}"
+                            class="modal-close waves-effect waves-green btn-flat">Delete</a>
+                        <button class="modal-close btn-flat">Go Back</button>
+                    </div>
+                </div>
                 {% endif %}
             {% endfor %}
         </div>
@@ -50,21 +52,33 @@
             Backstroke
             {% for entry in entries %}
                 {% if entry.stroke == "backstroke" %}
-                    <ul class="collapsible">
-                        <li>
-                            <div class="collapsible-header"><i class="material-icons"></i>{{ entry.distance }} {{ entry.stroke }}: {{
-                                entry.time }}
-                                <div class="col s2">
-                                    <a href="" class="waves-effect waves-light btn edit-button">Edit</a>
-                                    <a href="#modal1" class="waves-effect waves-light btn delete-button">Delete</a>
-                                </div>
+                <div class="col s12 m4 offset-m4">
+                    <div class="card horizontal">
+                        <div class="card-stacked">
+                            <div class="card-content center-align">
+                                <div class="entry-date"><strong>{{ entry.date }}</strong></div><br>
+                                <div class="entry-details">{{ entry.distance }} {{ entry.stroke }}: {{ entry.time }}</div>
                             </div>
-                            <div class="collapsible-body">
-                                <span>{{ entry.date }}</span><br>
-                                {{ entry.personal_best }}<br>
+                            <div class="card-action center-align">
+                                <a href="#" class="">Edit</a>
+                                <a href="#delete-modal2" class="modal-trigger">Delete</a>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="delete-modal2" class="modal">
+                    <div class="modal-content center-align">
+                        <h4>Delete Entry</h4>
+                        <p>Are you sure you wish to delete this entry:</p>
+                        <em><div class="entry-date"><strong>{{ entry.date }}</strong></div><br>
+                        <div class="entry-details">{{ entry.distance }} {{ entry.stroke }}: {{ entry.time }}</div></em>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="{{ url_for('delete_entry', entry_id=entry._id) }}"
+                            class="modal-close waves-effect waves-green btn-flat">Delete</a>
+                        <button class="modal-close btn-flat">Go Back</button>
+                    </div>
+                </div>
                 {% endif %}
             {% endfor %}
         </div>
@@ -73,21 +87,33 @@
             Breaststroke
             {% for entry in entries %}
                 {% if entry.stroke == "breaststroke" %}
-                    <ul class="collapsible">
-                        <li>
-                            <div class="collapsible-header"><i class="material-icons"></i>{{ entry.distance }} {{ entry.stroke }}: {{
-                                entry.time }}
-                                <div class="col s2">
-                                    <a href="" class="waves-effect waves-light btn edit-button">Edit</a>
-                                    <a href="#modal1" class="waves-effect waves-light btn delete-button">Delete</a>
-                                </div>
+                <div class="col s12 m4 offset-m4">
+                    <div class="card horizontal">
+                        <div class="card-stacked">
+                            <div class="card-content center-align">
+                                <div class="entry-date"><strong>{{ entry.date }}</strong></div><br>
+                                <div class="entry-details">{{ entry.distance }} {{ entry.stroke }}: {{ entry.time }}</div>
                             </div>
-                            <div class="collapsible-body">
-                                <span>{{ entry.date }}</span><br>
-                                {{ entry.personal_best }}<br>
+                            <div class="card-action center-align">
+                                <a href="#" class="">Edit</a>
+                                <a href="#delete-modal3" class="modal-trigger">Delete</a>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="delete-modal3" class="modal">
+                    <div class="modal-content center-align">
+                        <h4>Delete Entry</h4>
+                        <p>Are you sure you wish to delete this entry:</p>
+                        <em><div class="entry-date"><strong>{{ entry.date }}</strong></div><br>
+                        <div class="entry-details">{{ entry.distance }} {{ entry.stroke }}: {{ entry.time }}</div></em>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="{{ url_for('delete_entry', entry_id=entry._id) }}"
+                            class="modal-close waves-effect waves-green btn-flat">Delete</a>
+                        <button class="modal-close btn-flat">Go Back</button>
+                    </div>
+                </div>
                 {% endif %}
             {% endfor %}
         </div>
@@ -96,23 +122,39 @@
             Butterfly
             {% for entry in entries %}
                 {% if entry.stroke == "butterfly" %}
-                    <ul class="collapsible">
-                        <li>
-                            <div class="collapsible-header"><i class="material-icons"></i>{{ entry.distance }} {{ entry.stroke }}: {{
-                                entry.time }}
-                                <div class="col s2">
-                                    <a href="" class="waves-effect waves-light btn edit-button">Edit</a>
-                                    <a href="#modal1" class="waves-effect waves-light btn modal-trigger delete-button">Delete</a>
-                                </div>
+                <div class="col s12 m4 offset-m4">
+                    <div class="card horizontal">
+                        <div class="card-stacked">
+                            <div class="card-content center-align">
+                                <div class="entry-date"><strong>{{ entry.date }}</strong></div><br>
+                                <div class="entry-details">{{ entry.distance }} {{ entry.stroke }}: {{ entry.time }}</div>
                             </div>
-                            <div class="collapsible-body">
-                                <span>{{ entry.date }}</span><br>
-                                {{ entry.personal_best }}<br>
+                            <div class="card-action center-align">
+                                <a href="#" class="">Edit</a>
+                                <a href="#delete-modal4" class="modal-trigger">Delete</a>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="delete-modal4" class="modal">
+                    <div class="modal-content center-align">
+                        <h4>Delete Entry</h4>
+                        <p>Are you sure you wish to delete this entry:</p>
+                        <em><div class="entry-date"><strong>{{ entry.date }}</strong></div><br>
+                        <div class="entry-details">{{ entry.distance }} {{ entry.stroke }}: {{ entry.time }}</div></em>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="{{ url_for('delete_entry', entry_id=entry._id) }}"
+                            class="modal-close waves-effect waves-green btn-flat">Delete</a>
+                        <button class="modal-close btn-flat">Go Back</button>
+                    </div>
+                </div>
                 {% endif %}
             {% endfor %}
         </div>
     </div>
+
+    
+
+    
 {% endblock %}
