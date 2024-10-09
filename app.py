@@ -64,7 +64,6 @@ def login():
         if existing_user:
             if check_password_hash(existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
-                print(session)
                 flash(f"Welcome back, {session['user']}")
                 return redirect(url_for("get_entries"))
             
@@ -82,21 +81,19 @@ def login():
 @app.route("/logout")
 def logout():
     flash("You have been logged out")
-    print(session)
     session.pop("user")
-    print(session)
     return redirect(url_for("login"))
 
 
 @app.route("/add_new_entry", methods=["GET", "POST"])
 def add_new_entry():
     if request.method == "POST":
+        print(session)
         entry = {
             "stroke": request.form.get("stroke_name"),
             "distance": request.form.get("distance"),
             "time": request.form.get("swim_time"),
             "date": request.form.get("swim_date"),
-            "created_by_user": session["user"]
         }
         mongo.db.entries.insert_one(entry)
         flash("Time Added")
@@ -105,6 +102,15 @@ def add_new_entry():
     strokes = mongo.db.strokes.find()
     distances = mongo.db.distances.find()
     return render_template("new_entry.html", strokes=strokes, distances=distances)
+
+
+@app.route("/edit_entry/<entry_id>", methods=["GET", "POST"])
+def edit_entry(entry_id):
+    entry = mongo.db.entries.find_one({"_id": ObjectId(entry_id)})
+    
+    strokes = mongo.db.strokes.find()
+    distances = mongo.db.distances.find()
+    return render_template("edit_entry.html", entry=entry, strokes=strokes, distances=distances)
 
 
 @app.route("/delete_entry/<entry_id>")
