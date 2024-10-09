@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="center-align">Edit Entry</h2>
+
+<div class="row card center-align">
+    <form class="col s8 offset-s2 " method="POST" action="{{ url_for('edit_entry', entry_id=entry._id) }}">
+        <div class="row">
+            <!-- Stroke -->
+            <div class="input-field col s6">
+                <select name="stroke_name" id="stroke_name">
+                    <option value="" disabled>-------</option>
+                    {% for stroke in strokes %}
+                        {% if stroke.stroke_name == entry.stroke_name %}
+                            <option value="{{ stroke.stroke_name }}" selected>{{ stroke.stroke_name }}</option>
+                        {% else %}
+                            <option value="{{ stroke.stroke_name }}">{{ stroke.stroke_name }}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+                <label for="stroke_name">Stroke</label>
+            </div>
+      <!-- Distance -->
+    <div class="input-field col s6">
+        <select name="distance" id="distance">
+            <option value="" disabled>-------</option>
+            {% for race_distance in distances %}
+                {% if race_distance.race_distance == entry.race_distance %}
+                    <option value="{{ race_distance.race_distance }}" selected>{{ race_distance.race_distance }}</option>
+                {% else %}
+                    <option value="{{ race_distance.race_distance }}">{{ race_distance.race_distance }}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+        <label for="distance">Distance</label>
+    </div>
+    </div>
+    <!-- Time -->
+     <div class="row">
+        <div class="input-field col s12">
+          <input id="swim_time" name="swim_time" type="tel" pattern="[0-9]{2}+:[0-9]{2}+.[0-9]{2}">
+          <label for="swim_time">Time (Format: 00:00.00)</label>
+        </div>
+     </div>
+    <!-- Date -->
+    <div class="row">
+      <div class="input-field col s6"></div>
+      <input id="swim_date" name="swim_date" type="text" class="datepicker">
+      <label for="swim_date">Date</label>
+    </div>
+    <!-- Submit -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <button type="submit">
+          Edit Entry
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+{% endblock %}
