@@ -63,7 +63,7 @@
                                 <div class="entry-details">{{ entry.distance }} {{ entry.stroke }}: {{ entry.time }}</div>
                             </div>
                             <div class="card-action center-align">
-                                <a href="#" class="">Edit</a>
+                                <a href="{{ url_for('edit_entry', entry_id=entry._id) }}" class="">Edit</a>
                                 <a href="#delete-modal2" class="modal-trigger">Delete</a>
                             </div>
                         </div>
@@ -98,7 +98,7 @@
                                 <div class="entry-details">{{ entry.distance }} {{ entry.stroke }}: {{ entry.time }}</div>
                             </div>
                             <div class="card-action center-align">
-                                <a href="#" class="">Edit</a>
+                                <a href="{{ url_for('edit_entry', entry_id=entry._id) }}" class="">Edit</a>
                                 <a href="#delete-modal3" class="modal-trigger">Delete</a>
                             </div>
                         </div>
@@ -133,7 +133,7 @@
                                 <div class="entry-details">{{ entry.distance }} {{ entry.stroke }}: {{ entry.time }}</div>
                             </div>
                             <div class="card-action center-align">
-                                <a href="#" class="">Edit</a>
+                                <a href="{{ url_for('edit_entry', entry_id=entry._id) }}" class="">Edit</a>
                                 <a href="#delete-modal4" class="modal-trigger">Delete</a>
                             </div>
                         </div>
@@ -156,8 +156,5 @@
             {% endfor %}
         </div>
     </div>
-
-    
-
-    
+  
 {% endblock %}
