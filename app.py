@@ -106,8 +106,18 @@ def add_new_entry():
 
 @app.route("/edit_entry/<entry_id>", methods=["GET", "POST"])
 def edit_entry(entry_id):
-    entry = mongo.db.entries.find_one({"_id": ObjectId(entry_id)})
+    if request.method == "POST":
+        edited_entry = {
+            "stroke": request.form.get("stroke_name"),
+            "distance": request.form.get("distance"),
+            "time": request.form.get("swim_time"),
+            "date": request.form.get("swim_date"),
+        }
+        mongo.db.entries.replace_one({"_id": ObjectId(entry_id)}, edited_entry)
+        flash("Entry Edited")
+        return redirect(url_for("get_entries"))
     
+    entry = mongo.db.entries.find_one({"_id": ObjectId(entry_id)})
     strokes = mongo.db.strokes.find()
     distances = mongo.db.distances.find()
     return render_template("edit_entry.html", entry=entry, strokes=strokes, distances=distances)
