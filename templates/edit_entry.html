@@ -39,14 +39,14 @@
     <!-- Time -->
      <div class="row">
         <div class="input-field col s12">
-          <input id="swim_time" name="swim_time" type="tel" pattern="[0-9]{2}+:[0-9]{2}+.[0-9]{2}">
+          <input id="swim_time" name="swim_time" value="{{ entry.swim_time }}" type="tel" pattern="[0-9]{2}+:[0-9]{2}+.[0-9]{2}">
           <label for="swim_time">Time (Format: 00:00.00)</label>
         </div>
      </div>
     <!-- Date -->
     <div class="row">
       <div class="input-field col s6"></div>
-      <input id="swim_date" name="swim_date" type="text" class="datepicker">
+      <input id="swim_date" name="swim_date" value="{{ entry.swim_date }}" type="text" class="datepicker">
       <label for="swim_date">Date</label>
     </div>
     <!-- Submit -->
