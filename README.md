@@ -57,3 +57,5 @@ Wireframes were created on balsamiq for desktop, tablet and mobile displays.
 ## Credits
 
 ### Code Used From Outside Sources
+
+* I used [this StackOverflow post](https://stackoverflow.com/questions/69950552/mongodb-update-i-cant-update-my-documents-in-mongodb-with-flask-api) to fix and issue with the update_one() method not working properly.
