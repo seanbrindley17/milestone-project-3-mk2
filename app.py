@@ -93,16 +93,20 @@ def logout():
 @app.route("/add_new_entry", methods=["GET", "POST"])
 def add_new_entry():
     if request.method == "POST":
-        print(session)
-        entry = {
-            "stroke": request.form.get("stroke_name"),
-            "distance": request.form.get("distance"),
-            "time": request.form.get("swim_time"),
-            "date": request.form.get("swim_date"),
-        }
-        mongo.db.entries.insert_one(entry)
-        flash("Time Added")
-        return redirect(url_for("get_entries"))
+        if "user" in session:
+            entry = {
+                "stroke": request.form.get("stroke_name"),
+                "distance": request.form.get("distance"),
+                "time": request.form.get("swim_time"),
+                "date": request.form.get("swim_date"),
+                "created_by": session["user"]
+            }
+            mongo.db.entries.insert_one(entry)
+            flash("Time Added")
+            return redirect(url_for("get_entries"))
+        else:
+            flash("Log in to add an entry")
+            return redirect(url_for("login"))
     
     strokes = mongo.db.strokes.find()
     distances = mongo.db.distances.find()
