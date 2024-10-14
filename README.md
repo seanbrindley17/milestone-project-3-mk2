@@ -62,6 +62,8 @@ Wireframes were created on balsamiq for desktop, tablet and mobile displays.
 
 * I used [this StackOverflow post](https://stackoverflow.com/questions/5655207/footer-not-sticking-to-bottom-of-page?rq=3) to help with my welcome footer not sitting at the bottom of the welcome page.
 
+* I used [this StackOverflow post](https://stackoverflow.com/questions/15591620/how-to-retrieve-session-data-with-flask) to help with retrieving my user session cookie data to use in my add_new_entry() function.
+
 #### Materialize.com
 
 I used Materialize as the framework for this project using their code and JQuery initialisation. Components used will be listed here.
