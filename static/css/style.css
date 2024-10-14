@@ -6,3 +6,12 @@
 .custom-panel-register {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
+/* Footer
+-------------------------------------------------------------------- */
+
+.welcome-footer {
+    bottom: 2px;
+    position: absolute;
+    width: 100%;
+}
