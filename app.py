@@ -25,6 +25,11 @@ def get_entries():
     return render_template("entries.html", entries=entries)
 
 
+@app.route("/welcome")
+def welcome():
+    return render_template("welcome.html")
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
