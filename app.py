@@ -18,13 +18,13 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-@app.route("/")
 @app.route("/get_entries")
 def get_entries():
     entries = list(mongo.db.entries.find())
     return render_template("entries.html", entries=entries)
 
 
+@app.route("/")
 @app.route("/welcome")
 def welcome():
     return render_template("welcome.html")
