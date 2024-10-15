@@ -20,7 +20,7 @@ mongo = PyMongo(app)
 
 @app.route("/get_entries")
 def get_entries():
-    entries = list(mongo.db.entries.find())
+    entries = list(mongo.db.entries.find({"created_by": session["user"]}))
     return render_template("entries.html", entries=entries)
 
 
