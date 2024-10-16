@@ -31,6 +31,7 @@
     <!-- Time -->
      <div class="row">
         <div class="input-field col s12">
+          <!-- Need to find a better way for a user to input a race time, which type would be best? -->
           <input id="swim_time" name="swim_time" type="tel" pattern="[0-9]{2}+:[0-9]{2}+.[0-9]{2}">
           <label for="swim_time">Time (Format: 00(Minutes):00(Seconds).00(Milliseconds))</label>
         </div>
@@ -38,6 +39,7 @@
     <!-- Date -->
     <div class="row">
       <div class="input-field col s6"></div>
+      <!-- Date picker currently allows users to pick dates in the future, I don't want that to be possible -->
       <input id="swim_date" name="swim_date" type="text" class="datepicker">
       <label for="swim_date">Date</label>
     </div>

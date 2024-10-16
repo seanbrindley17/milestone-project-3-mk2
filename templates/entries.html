@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-
+    <!-- Stroke tabs -->
     <div class="row">
         <div class="col s12">
             <ul class="tabs">
@@ -12,7 +12,7 @@
             </ul>
         </div>
         
-        
+        <!-- Freestyle entries tab -->
         <div id="freestyle-tab" class="col s12">
             Freestyle
             {% for entry in entries %}
@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </div>
-
+            <!-- Delete confirmation box modal -->
             <div id="delete-modal1" class="modal">
                 <div class="modal-content center-align">
                     <h4>Delete Entry</h4>
@@ -51,6 +51,7 @@
         {% endfor %}
         </div>
 
+        <!-- Backstroke entries tab -->
         <div id="backstroke-tab" class="col s12">
             Backstroke
             {% for entry in entries %}
@@ -69,6 +70,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Delete confirmation box modal -->
                 <div id="delete-modal2" class="modal">
                     <div class="modal-content center-align">
                         <h4>Delete Entry</h4>
@@ -86,6 +88,7 @@
             {% endfor %}
         </div>
         
+        <!-- Breaststroke entries tab -->
         <div id="breaststroke-tab" class="col s12">
             Breaststroke
             {% for entry in entries %}
@@ -104,6 +107,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Delete confirmation box modal -->
                 <div id="delete-modal3" class="modal">
                     <div class="modal-content center-align">
                         <h4>Delete Entry</h4>
@@ -121,6 +125,7 @@
             {% endfor %}
         </div>
         
+        <!-- Butterfly entries tab -->
         <div id="butterfly-tab" class="col s12">
             Butterfly
             {% for entry in entries %}
@@ -139,6 +144,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Delete confirmation box modal -->
                 <div id="delete-modal4" class="modal">
                     <div class="modal-content center-align">
                         <h4>Delete Entry</h4>
