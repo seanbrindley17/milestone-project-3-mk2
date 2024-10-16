@@ -66,7 +66,7 @@ Wireframes were created on balsamiq for desktop, tablet and mobile displays.
 
 #### Materialize.com
 
-I used Materialize as the framework for this project using their code and JQuery initialisation. Components used will be listed here.
+I used Materialize as the framework for this project using their code and JQuery initialisation. Components used will be listed here. JQuery initialisation is commented as such on the script.js file.
 
 * The Materilize grid system used for page layout [here](https://materializecss.com/grid.html)
 
@@ -74,10 +74,12 @@ I used Materialize as the framework for this project using their code and JQuery
 
 * To create the tabs on my entries.html page [Materialize tabs](https://materializecss.com/tabs.html).
 
-* I used [Basic Card](https://materializecss.com/cards.html) for the majority of my div containers, except on the Register.html form where Card Panel is used.
+* I used [Basic Card](https://materializecss.com/cards.html) for the majority of my div containers, except on the Register.html form where Card Panel is used and entries.html where Horizontal Card is used.
 
 * In my forms, I used [these text inputs (Input Fields)](https://materializecss.com/text-inputs.html), as well as the [Materialize Date Picker](https://materializecss.com/pickers.html).
 
     * Within the form input fields, I used [Materialize Select](https://materializecss.com/select.html) for options requiring a drop down along with the Disabled attribute.
+
+* For my delete cofirmation feature, I used the [Materialize Modal](https://materializecss.com/modals.html) to show the user a pop up with confirmation when they click on delete.
 
 * On my welcome.html page included the [Materialize Footer](https://materializecss.com/footer.html).
