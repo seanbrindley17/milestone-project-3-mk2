@@ -24,7 +24,7 @@
             </div>
       <!-- Distance -->
     <div class="input-field col s6">
-        <select name="distance" id="distance">
+        <select name="distance" id="distance" required>
             <option value="" disabled>-------</option>
             <!-- Currently not working, not showing variables from entry chosen as selected -->
             {% for race_distance in distances %}
@@ -42,7 +42,7 @@
      <div class="row">
         <div class="input-field col s12">
             <!-- Currently not working, not showing variables from entry chosen as selected -->
-          <input id="swim_time" name="swim_time" value="{{ entry.swim_time }}" type="tel" pattern="[0-9]{2}+:[0-9]{2}+.[0-9]{2}">
+          <input id="swim_time" name="swim_time" value="{{ entry.swim_time }}" type="tel" pattern="[0-9]{2}+:[0-9]{2}+.[0-9]{2}" required>
           <label for="swim_time">Time (Format: 00(Minutes):00(Seconds).00(Milliseconds))</label>
         </div>
      </div>
@@ -50,7 +50,7 @@
     <div class="row">
       <div class="input-field col s6"></div>
       <!-- Currently not working, not showing variables from entry chosen as selected -->
-      <input id="swim_date" name="swim_date" value="{{ entry.swim_date }}" type="text" class="datepicker">
+      <input id="swim_date" name="swim_date" value="{{ entry.swim_date }}" type="text" class="datepicker" required>
       <label for="swim_date">Date</label>
     </div>
     <!-- Submit -->
