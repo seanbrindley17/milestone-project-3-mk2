@@ -13,7 +13,7 @@
                     <option value="" disabled>-------</option>
                     <!-- Currently not working, not showing variables from entry chosen as selected -->
                     {% for stroke in strokes %}
-                        {% if stroke.stroke_name == entry.stroke_name %}
+                        {% if stroke.stroke_name == entry.stroke %}
                             <option value="{{ stroke.stroke_name }}" selected>{{ stroke.stroke_name }}</option>
                         {% else %}
                             <option value="{{ stroke.stroke_name }}">{{ stroke.stroke_name }}</option>
@@ -28,7 +28,7 @@
             <option value="" disabled>-------</option>
             <!-- Currently not working, not showing variables from entry chosen as selected -->
             {% for race_distance in distances %}
-                {% if race_distance.race_distance == entry.race_distance %}
+                {% if race_distance.race_distance == entry.distance %}
                     <option value="{{ race_distance.race_distance }}" selected>{{ race_distance.race_distance }}</option>
                 {% else %}
                     <option value="{{ race_distance.race_distance }}">{{ race_distance.race_distance }}</option>
