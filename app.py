@@ -101,10 +101,18 @@ def logout():
 def add_new_entry():
     if request.method == "POST":
         if "user" in session:
+            minutes = request.form.get("minutes")
+            seconds = request.form.get("seconds")
+            milliseconds = request.form.get("milliseconds")
+            
+            # Want to make it so only accepts two digits in each field to make consistent format
+            race_time = minutes + ":" + seconds + "." + milliseconds
+            print(race_time)
+            
             entry = {
                 "stroke": request.form.get("stroke_name"),
                 "distance": request.form.get("distance"),
-                "time": request.form.get("swim_time"),
+                "time": race_time,
                 "date": request.form.get("swim_date"),
                 "created_by": session["user"]
             }
