@@ -29,13 +29,20 @@
       </div>
     </div>
     <!-- Time -->
-     <div class="row">
-        <div class="input-field col s12">
-          <!-- Need to find a better way for a user to input a race time, which type would be best? -->
-          <input id="swim_time" name="swim_time" type="tel" pattern="[0-9]{2}+:[0-9]{2}+.[0-9]{2}" required>
-          <label for="swim_time">Time (Format: 00(Minutes):00(Seconds).00(Milliseconds))</label>
-        </div>
-     </div>
+    <div class="row">
+      <div class="input-field col s4">
+        <input type="number" id="minutes" name="minutes">
+        <label for="minutes">Mins</label>
+      </div>
+      <div class="input-field col s4">
+        <input type="number" id="seconds" name="seconds">
+        <label for="seconds">Seconds</label>
+      </div>
+      <div class="input-field col s4">
+        <input type="number" name="milliseconds" id="milliseconds">
+        <label for="milliseconds">Milliseconds</label>
+      </div>
+    </div>
     <!-- Date -->
     <div class="row">
       <div class="input-field col s6"></div>
