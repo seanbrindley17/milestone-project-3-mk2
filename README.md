@@ -64,6 +64,8 @@ Wireframes were created on balsamiq for desktop, tablet and mobile displays.
 
 * I used [this StackOverflow post](https://stackoverflow.com/questions/15591620/how-to-retrieve-session-data-with-flask) to help with retrieving my user session cookie data to use in my add_new_entry() function.
 
+* I used [this post on AdvancedCustomFields.com](https://support.advancedcustomfields.com/forums/topic/datepicker-disable-selecting-future-dates/#post-60753) to make it so that a user couldn't pick a date in the future in my date picker.
+
 #### Materialize.com
 
 I used Materialize as the framework for this project using their code and JQuery initialisation. Components used will be listed here. JQuery initialisation is commented as such on the script.js file.
