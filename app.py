@@ -87,7 +87,8 @@ def login():
     return render_template("login.html")
 
 
-# Logs the user out by popping the session user cookie out of storage
+# Logs the user out by popping the session user cookie out of storage.
+# A pop up confirmation box contains the function call button.
 @app.route("/logout")
 def logout():
     flash("You have been logged out")
@@ -95,7 +96,8 @@ def logout():
     return redirect(url_for("login"))
 
 
-# Allows the user to add an entry. Also stores their username to allow display of only entries created by that user
+# Allows the user to add an entry.
+# Also stores their username to allow display of only entries created by that user
 @app.route("/add_new_entry", methods=["GET", "POST"])
 def add_new_entry():
     if request.method == "POST":
@@ -127,7 +129,7 @@ def add_new_entry():
     return render_template("new_entry.html", strokes=strokes, distances=distances)
 
 
-# Allows user to edit an entry. Currently not working perfectly as entry being edited's values are not being displayed as selected
+# Allows user to edit an entry.
 @app.route("/edit_entry/<entry_id>", methods=["GET", "POST"])
 def edit_entry(entry_id):
     if request.method == "POST":
@@ -147,7 +149,8 @@ def edit_entry(entry_id):
     return render_template("edit_entry.html", entry=entry, strokes=strokes, distances=distances)
 
 
-# Will delete an entry when called on it. Defensive programming means there's a pop up confirmation before this happens
+# Will delete an entry when called on it.
+# There's a pop up confirmation before this happens.
 @app.route("/delete_entry/<entry_id>")
 def delete_entry(entry_id):
     mongo.db.entries.delete_one({"_id": ObjectId(entry_id)})
