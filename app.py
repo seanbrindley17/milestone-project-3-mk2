@@ -72,9 +72,8 @@ def login():
         
         if existing_user:
             if check_password_hash(existing_user["password"], request.form.get("password")):
-                # Want to have it so that instead of saying welcome back, "username", it displays the stored first name of the account user.
-                session["user"] = request.form.get("username").lower()
-                flash(f"Welcome back, {session['user']}")
+                display_name = existing_user["first_name"]
+                flash(f"Welcome back, {display_name}")
                 return redirect(url_for("get_entries"))
             
             
