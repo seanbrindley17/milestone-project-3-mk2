@@ -13,32 +13,35 @@
         </div>
 
         <!-- I want to add a kind of sort or filter thing here to allow the user to sort entries by time ascending or date, and with the differet distances etc -->
-        <div id="entry-filter">
-            <div class="input-field col s3 offset-s3">
-                <select name="distance-filter" id="distance-filter" required>
-                    <option value="" disabled selected>-------</option>
-                    <option value="25m">25m</option>
-                    <option value="50m">50m</option>
-                    <option value="100m">100m</option>
-                    <option value="200m">200m</option>
-                </select>
-                <label for="distance-filter">Filter Distance</label>
+        <form action="" method="">
+            <div id="entry-filter">
+                <!-- Filter for race distances -->
+                <div class="input-field col s3 offset-s3">
+                    <select name="distance-filter" id="distance-filter" required>
+                        <option value="" disabled selected>-------</option>
+                        <option value="25m">25m</option>
+                        <option value="50m">50m</option>
+                        <option value="100m">100m</option>
+                        <option value="200m">200m</option>
+                    </select>
+                    <label for="distance-filter">Filter Distance</label>
+                </div>
+                <!-- Filter for Date and Time -->
+                <div class="input-field col s3">
+                    <select name="date-time-filter" id="date-time-filter" required>
+                        <option value="" disabled selected>-------</option>
+                        <option value="time-fastest">Time (Fastest to Slowest)</option>
+                        <option value="time-slowest">Time (Slowest to Fastest)</option>
+                        <option value="date-latest">Date (Latest to Earliest)</option>
+                        <option value="date-earliest">Date (Earliest to Latest)</option>
+                    </select>
+                    <label for="date-time-filter">Filter By Time/Date</label>
+                </div>
             </div>
-            <div class="input-field col s3">
-                <select name="date-time-filter" id="date-time-filter" required>
-                    <option value="" disabled selected>-------</option>
-                    <option value="time-fastest">Time (Fastest to Slowest)</option>
-                    <option value="time-slowest">Time (Slowest to Fastest)</option>
-                    <option value="date-latest">Date (Latest to Earliest)</option>
-                    <option value="date-earliest">Date (Earliest to Latest)</option>
-                </select>
-                <label for="date-time-filter">Filter By Time/Date</label>
-            </div>
-        </div>
+        </form>
         
         <!-- Freestyle entries tab -->
         <div id="freestyle-tab" class="col s12">
-            Freestyle
             {% for entry in entries %}
             {% if entry.stroke == "freestyle" %}
             <div class="col s12 m4 offset-m4">
@@ -77,7 +80,6 @@
 
         <!-- Backstroke entries tab -->
         <div id="backstroke-tab" class="col s12">
-            Backstroke
             {% for entry in entries %}
                 {% if entry.stroke == "backstroke" %}
                 <div class="col s12 m4 offset-m4">
@@ -114,7 +116,6 @@
         
         <!-- Breaststroke entries tab -->
         <div id="breaststroke-tab" class="col s12">
-            Breaststroke
             {% for entry in entries %}
                 {% if entry.stroke == "breaststroke" %}
                 <div class="col s12 m4 offset-m4">
@@ -151,7 +152,6 @@
         
         <!-- Butterfly entries tab -->
         <div id="butterfly-tab" class="col s12">
-            Butterfly
             {% for entry in entries %}
                 {% if entry.stroke == "butterfly" %}
                 <div class="col s12 m4 offset-m4">
