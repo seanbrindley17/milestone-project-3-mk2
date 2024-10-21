@@ -19,8 +19,14 @@ mongo = PyMongo(app)
 
 
 # Shows the user the entries created by them by matching the username to the session user cookie
-@app.route("/get_entries")
+@app.route("/get_entries", methods=["GET", "POST"])
 def get_entries():
+    if request.method == "POST":
+        distance_filter = request.form.get("distance-filter")
+        print(distance_filter)
+        date_time_filter = request.form.get("date-time-filter")
+        print(date_time_filter)
+    
     entries = list(mongo.db.entries.find({"created_by": session["user"]}))
     return render_template("entries.html", entries=entries)
 
