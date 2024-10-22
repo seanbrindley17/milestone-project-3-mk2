@@ -28,6 +28,8 @@ def get_entries():
         print(date_time_filter)
         
         if distance_filter:
+            entries = list(mongo.db.entries.find({"created_by": session["user"], "distance": distance_filter}))
+            return render_template("entries.html", entries=entries)
     
     entries = list(mongo.db.entries.find({"created_by": session["user"]}))
     return render_template("entries.html", entries=entries)
