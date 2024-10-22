@@ -58,6 +58,8 @@ Wireframes were created on balsamiq for desktop, tablet and mobile displays.
 
 * [This guide](https://realpython.com/python-comments-guide/) on Real Python for commenting best practices.
 
+* [This guide](https://docs.python.org/3/howto/sorting.html) on Python's own documentation written by Andrew Dalke and Raymond Hettinger for introducing me to the lambda function which enabled my filters to begin working.
+
 ### Code Used From Outside Sources
 
 * I used [this StackOverflow post](https://stackoverflow.com/questions/69950552/mongodb-update-i-cant-update-my-documents-in-mongodb-with-flask-api) to fix an issue with the update_one() method not working properly.
