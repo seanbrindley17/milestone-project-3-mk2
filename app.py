@@ -26,6 +26,8 @@ def get_entries():
         print(distance_filter)
         date_time_filter = request.form.get("date-time-filter")
         print(date_time_filter)
+        
+        if distance_filter:
     
     entries = list(mongo.db.entries.find({"created_by": session["user"]}))
     return render_template("entries.html", entries=entries)
@@ -79,6 +81,7 @@ def login():
         if existing_user:
             if check_password_hash(existing_user["password"], request.form.get("password")):
                 display_name = existing_user["first_name"]
+                session["user"] = request.form.get("username").lower()
                 flash(f"Welcome back, {display_name}")
                 return redirect(url_for("get_entries"))
             
