@@ -29,7 +29,13 @@ def get_entries():
         
         if distance_filter:
             entries = list(mongo.db.entries.find({"created_by": session["user"], "distance": distance_filter}))
-            return render_template("entries.html", entries=entries)
+            
+        if date_time_filter == "date-latest":
+            entries = sorted(entries, key=lambda entry: entry[("date")], reverse=True)
+        elif date_time_filter == "date-earliest":
+            entries = sorted(entries, key=lambda entry: entry[("date")])
+            
+        return render_template("entries.html", entries=entries)
     
     entries = list(mongo.db.entries.find({"created_by": session["user"]}))
     return render_template("entries.html", entries=entries)
