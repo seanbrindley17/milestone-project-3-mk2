@@ -27,6 +27,8 @@ def get_entries():
         date_time_filter = request.form.get("date-time-filter")
         print(date_time_filter)
         
+        entries = list(mongo.db.entries.find({"created_by": session["user"]}))
+        
         if distance_filter:
             entries = list(mongo.db.entries.find({"created_by": session["user"], "distance": distance_filter}))
             
