@@ -62,6 +62,8 @@ Wireframes were created on balsamiq for desktop, tablet and mobile displays.
 
 * [This guide](https://www.geeksforgeeks.org/python-string-split/) on GeeksForGeeks explaining the split() function in a little more detail allowing me to work out how to prepopulate my race time input fields in the edit_entry() function.
 
+* To try and sort out my dates and times and make them more easily sortable, I used [This guide on DateTime](https://docs.python.org/3/library/datetime.html#datetime.datetime) from Python's own documentation and [This guide on strptime()](https://www.ibm.com/docs/en/i/7.5?topic=functions-strptime-convert-string-datetime) from IBM.
+
 ### Code Used From Outside Sources
 
 * I used [this StackOverflow post](https://stackoverflow.com/questions/69950552/mongodb-update-i-cant-update-my-documents-in-mongodb-with-flask-api) to fix an issue with the update_one() method not working properly.

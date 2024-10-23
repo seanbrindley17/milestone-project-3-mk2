@@ -4,6 +4,7 @@ from flask import Flask, flash, render_template, redirect, request, session, url
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from datetime import datetime
 if os.path.exists("env.py"):
     import env
 
@@ -133,11 +134,16 @@ def add_new_entry():
             race_time = minutes + ":" + seconds + "." + milliseconds
             print(race_time)
             
+            swim_date_input = request.form.get("swim_date")
+            swim_date = datetime.strptime(swim_date_input, "%d %B, %Y")
+            swim_date = datetime.combine(swim_date.date(), datetime.min.time())
+            print(swim_date)
+            
             entry = {
                 "stroke": request.form.get("stroke_name"),
                 "distance": request.form.get("distance"),
                 "time": race_time,
-                "date": request.form.get("swim_date"),
+                "date": swim_date,
                 "created_by": session["user"]
             }
             mongo.db.entries.insert_one(entry)
