@@ -173,9 +173,18 @@ def edit_entry(entry_id):
         return redirect(url_for("get_entries"))
     
     entry = mongo.db.entries.find_one({"_id": ObjectId(entry_id)})
+    race_time_split = entry["time"].split(":")
+    minutes = race_time_split[0]
+    print(minutes)
+    race_time_split_seconds = race_time_split[1].split(".")
+    seconds = race_time_split_seconds[0]
+    milliseconds = race_time_split_seconds[1]
+    print(seconds)
+    print(milliseconds)
+    
     strokes = mongo.db.strokes.find()
     distances = mongo.db.distances.find()
-    return render_template("edit_entry.html", entry=entry, strokes=strokes, distances=distances)
+    return render_template("edit_entry.html", entry=entry, strokes=strokes, distances=distances, minutes=minutes, seconds=seconds, milliseconds=milliseconds)
 
 
 # Will delete an entry when called on it.
