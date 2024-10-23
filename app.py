@@ -156,10 +156,16 @@ def add_new_entry():
 @app.route("/edit_entry/<entry_id>", methods=["GET", "POST"])
 def edit_entry(entry_id):
     if request.method == "POST":
+        
+        minutes = request.form.get("minutes")
+        seconds = request.form.get("seconds")
+        milliseconds = request.form.get("milliseconds")
+        race_time = minutes + ":" + seconds + "." + milliseconds
+        
         edited_entry = {
             "stroke": request.form.get("stroke_name"),
             "distance": request.form.get("distance"),
-            "time": request.form.get("swim_time"),
+            "time": race_time,
             "date": request.form.get("swim_date"),
         }
         mongo.db.entries.replace_one({"_id": ObjectId(entry_id)}, edited_entry)
