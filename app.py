@@ -34,6 +34,10 @@ def get_entries():
             entries = sorted(entries, key=lambda entry: entry[("date")], reverse=True)
         elif date_time_filter == "date-earliest":
             entries = sorted(entries, key=lambda entry: entry[("date")])
+        elif date_time_filter == "time-fastest":
+            entries = sorted(entries, key=lambda entry: entry[("time")])
+        elif date_time_filter == "time-slowest":
+            entries = sorted(entries, key=lambda entry: entry(["time"]), reverse=True)
             
         return render_template("entries.html", entries=entries)
     
