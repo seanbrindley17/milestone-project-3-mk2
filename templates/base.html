@@ -18,38 +18,38 @@
     <title>SwimTimes</title>
 </head>
 
-<body>
+<body class="cyan darken-1">
 
     <header>
         <!-- Navbar -->
         <nav>
-            <div class="nav-wrapper">
+            <div class="nav-wrapper indigo darken-4">
                 <a href="#" class="brand-logo center">SwimTimes</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="left hide-on-med-and-down">
                     {% if session.user %}
-                        <li><a href="{{ url_for('get_entries') }}">Home</a></li>
-                        <li><a href="{{ url_for('add_new_entry') }}">Add New Time</a></li>
-                        <li><a href="#logout-modal" class="modal-trigger">Log Out</a></li>
+                        <li><a href="{{ url_for('get_entries') }}">Home <i class="fa-solid fa-water-ladder"></i></a></li>
+                        <li><a href="{{ url_for('add_new_entry') }}">Add New Time <i class="fa-solid fa-stopwatch"></i></a></li>
+                        <li><a href="#logout-modal" class="modal-trigger">Log Out <i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
                     {% else %}
-                        <li><a href="{{ url_for('welcome') }}">Welcome</a></li>
-                        <li><a href="{{ url_for('login') }}">Log In</a></li>
-                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                        <li><a href="{{ url_for('welcome') }}">Welcome <i class="fa-solid fa-water"></i></a></li>
+                        <li><a href="{{ url_for('login') }}">Log In <i class="fa-solid fa-door-open"></i></a></li>
+                        <li><a href="{{ url_for('register') }}">Register <i class="fa-solid fa-keyboard"></i></a></li>
                     {% endif %}
                 </ul>
             </div>
         </nav>
 
         <!-- Mobile collapsible -->
-        <ul class="sidenav" id="mobile-demo">
+        <ul class="sidenav indigo darken-2 mobile-navbar" id="mobile-demo">
             {% if session.user %}
-                <li><a href="{{ url_for('get_entries') }}">Home</a></li>
-                <li><a href="{{ url_for('add_new_entry') }}">Add New Time</a></li>
-                <li><a href="#logout-modal" class="modal-trigger">Log Out</a></li>
+                <li><a href="{{ url_for('get_entries') }}" class="white-text">Home <i class="fa-solid fa-water-ladder"></i></a></li>
+                <li><a href="{{ url_for('add_new_entry') }} " class="white-text">Add New Time <i class="fa-solid fa-stopwatch"></i></a></li>
+                <li><a href="#logout-modal" class="modal-trigger white-text">Log Out <i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
             {% else %}
-                <li><a href="{{ url_for('welcome') }}">Welcome</a></li>
-                <li><a href="{{ url_for('login') }}">Log In</a></li>
-                <li><a href="{{ url_for('register') }}">Register</a></li>
+                <li><a href="{{ url_for('welcome') }}" class="white-text">Welcome <i class="fa-solid fa-water"></i></a></li>
+                <li><a href="{{ url_for('login') }}" class="white-text">Log In <i class="fa-solid fa-door-open"></i></a></li>
+                <li><a href="{{ url_for('register') }}" class="white-text">Register <i class="fa-solid fa-keyboard"></i></a></li>
             {% endif %}
         </ul>
 
