@@ -1,10 +1,22 @@
 /* custom styles */
 
+* {
+    font-family: "Oxanium", sans-serif;
+}
+
 /* Register Page
 -------------------------------------------------------------------- */
 
 .custom-panel-register {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Entries/Logged in home page
+-------------------------------------------------------------------- */
+
+.entry-stroke {
+    font-size: 1.1rem;
+    padding-right: 10px;
 }
 
 /* Footer
