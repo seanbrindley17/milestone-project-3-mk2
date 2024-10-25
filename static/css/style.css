@@ -19,6 +19,25 @@
     color: white;
 }
 
+/* Welcome Page
+-------------------------------------------------------------------- */
+
+.welcome-title {
+    font-size: 3rem;
+}
+
+.welcome-content {
+    font-size: 1.2rem;
+}
+
+.login-button {
+    margin-right: 25px;
+}
+
+.register-button {
+    margin-left: 25px;
+}
+
 /* Register Page
 -------------------------------------------------------------------- */
 
