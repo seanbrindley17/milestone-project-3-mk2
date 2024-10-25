@@ -32,9 +32,25 @@ Wireframes were created on balsamiq for desktop, tablet and mobile displays.
 
 ### Fonts
 
-The fonts I used were from [Google Fonts](https://fonts.google.com/)
+The fonts I used were from [Google Fonts](https://fonts.google.com/).
 
-For my main font I used [Oxanium](https://fonts.google.com/specimen/Oxanium)
+For my main font I used [Oxanium](https://fonts.google.com/specimen/Oxanium).
+
+#### Font Awesome Icons
+
+In my site I used icons from [FontAwesome](https://fontawesome.com/) to make my menu items look less bland.
+
+* For the home links I used [this water ladder icon](https://fontawesome.com/icons/water-ladder?f=classic&s=solid).
+
+* For the add new entry links I used [this stopwatch icon](https://fontawesome.com/icons/stopwatch?f=classic&s=solid).
+
+* For the log out link I used [this exit icon](https://fontawesome.com/icons/arrow-right-from-bracket?f=classic&s=solid).
+
+* For the welcome link I used [this waves icon](https://fontawesome.com/icons/water?f=classic&s=solid).
+
+* For the log in link I used [this open door icon](https://fontawesome.com/icons/door-open?f=classic&s=solid).
+
+* For the register link I used [this keyboard icon](https://fontawesome.com/icons/keyboard?f=classic&s=solid).
 
 ### Technology Used
 
