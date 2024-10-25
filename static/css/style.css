@@ -38,6 +38,15 @@
     margin-left: 25px;
 }
 
+.welcome-footer p {
+    font-size: 0.9rem;
+}
+
+.welcome-footer p i {
+    color: white;
+    font-size: 1.2rem;
+}
+
 /* Register Page
 -------------------------------------------------------------------- */
 
@@ -49,24 +58,19 @@
 -------------------------------------------------------------------- */
 
 .select-wrapper {
-    border: 1px solid #0097a7;
     margin-top: 10px;
+    color: white;
 }
 
+
+
 .dropdown-content li>span {
-    color: black;
+    color: rgb(253, 253, 253);
+    background-color: #1a237e;
+    opacity: 0.75;
 }
 
 .entry-stroke {
     font-size: 1.1rem;
     padding-right: 10px;
-}
-
-/* Footer
--------------------------------------------------------------------- */
-
-.welcome-footer {
-    bottom: 2px;
-    position: absolute;
-    width: 100%;
 }
