@@ -30,6 +30,24 @@ Wireframes were created on balsamiq for desktop, tablet and mobile displays.
 
 ### Colours/Background
 
+As there's a theme of water, I decided to go for blue/green colours for my backgrounds.
+
+I used [Materialize's colour palette](https://materializecss.com/color.html) and will document the colour classes used from there below:
+
+* Where there is white text on darker backgrounds, I used Materialize's white-text class.
+
+* The main colour used as the background colour is #00acc1, corresponding to Materialize's "cyan darken-1" classes.
+
+* The colour used in the desktop navbar and all cards is #1a237e, corresponding to Materialize's "indigo darken-4" classes.
+
+* The colour used in the mobile navbar is #303f9f, corresponding to Materialize's "indigo darken-2" classes.
+
+* The colour used in my edit entry button on the entries.hmtl page is #1e88e5, corresponding to Materialize's "blue darken-1" classes.
+
+* The colour used in my delete entry button on the entries.html page and cancel button on edit_entry.html is #00838f, corresponding to Materializes's "cyan darken-3" classes.
+
+* The colour used on my submit entry button on new_entry.html, log in button on login.html and login and register buttons on welcome.html is #00acc1, corresponding to Materialize's "cyan darken-1" classes.
+
 ### Fonts
 
 The fonts I used were from [Google Fonts](https://fonts.google.com/).
