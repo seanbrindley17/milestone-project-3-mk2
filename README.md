@@ -32,6 +32,10 @@ Wireframes were created on balsamiq for desktop, tablet and mobile displays.
 
 ### Fonts
 
+The fonts I used were from [Google Fonts](https://fonts.google.com/)
+
+For my main font I used [Oxanium](https://fonts.google.com/specimen/Oxanium)
+
 ### Technology Used
 
 #### Coding Languages Used
