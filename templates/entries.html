@@ -16,7 +16,7 @@
         <form action="{{ url_for('get_entries') }}" method="POST">
             <div id="entry-filter">
                 <!-- Filter for race distances -->
-                <div class="input-field col s4 offset-s1">
+                <div class="input-field col s4 offset-l2">
                     <select name="distance-filter" id="distance-filter">
                         <option value="" disabled selected>-------</option>
                         <option value="25m">25m</option>
@@ -37,8 +37,8 @@
                     </select>
                     <label for="date-time-filter" class="white-text">Filter By Time/Date</label>
                 </div>
-                <div>
-                    <button type="submit">Apply Filter</button>
+                <div col s4>
+                    <button type="submit" class="btn-small indigo darken-2 filter-submit-button">Apply Filter</button>
                 </div>
             </div>
         </form>
