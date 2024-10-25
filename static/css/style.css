@@ -4,6 +4,21 @@
     font-family: "Oxanium", sans-serif;
 }
 
+/* Navbar
+-------------------------------------------------------------------- */
+
+.mobile-navbar li {
+    padding-top: 2rem;
+}
+
+.mobile-navbar li>a {
+    font-size: 1.8rem;
+}
+
+.mobile-navbar li>a>i {
+    color: white;
+}
+
 /* Register Page
 -------------------------------------------------------------------- */
 
@@ -13,6 +28,15 @@
 
 /* Entries/Logged in home page
 -------------------------------------------------------------------- */
+
+.select-wrapper {
+    border: 1px solid #0097a7;
+    margin-top: 10px;
+}
+
+.dropdown-content li>span {
+    color: black;
+}
 
 .entry-stroke {
     font-size: 1.1rem;
