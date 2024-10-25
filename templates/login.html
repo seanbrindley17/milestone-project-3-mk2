@@ -1,24 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>LOG IN</h2>
 
 <form class="row" method="POST" action="{{ url_for('login') }}">
-    <!-- Username field-->
-    <div class="input-field col s12">
-        <input placeholder="Username" name="username" id="username" type="text" class="validate">
-        <label for="username">Username</label>
-    </div>
-    <!-- Password field -->
-    <div class="input-field col s12">
-        <input name="password" id="password" type="password" class="validate">
-        <label for="password">Password</label>
-    </div>
-    <!-- Register Button -->
-    <div class="row">
-        <button type="submit" class="col s4 offset-s4 btn-small">
-            Log In
-        </button>
+    <div class="col s8 offset-s2 card-panel indigo darken-4">
+        <h2 class="center-align white-text">LOG IN</h2>
+        <!-- Username field-->
+        <div class="input-field col s10 offset-s1">
+            <input placeholder="Username" name="username" id="username" type="text" class="validate">
+            <label for="username">Username</label>
+        </div>
+        <!-- Password field -->
+        <div class="input-field col s10 offset-s1">
+            <input name="password" id="password" type="password" class="validate">
+            <label for="password">Password</label>
+        </div>
+        <!-- Register Button -->
+        <div class="row">
+            <button type="submit" class="col s4 offset-s4 btn-small">
+                Log In
+            </button>
+        </div>
     </div>
 </form>
 
