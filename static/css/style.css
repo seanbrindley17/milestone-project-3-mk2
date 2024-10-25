@@ -62,15 +62,38 @@
     color: white;
 }
 
-
-
 .dropdown-content li>span {
     color: rgb(253, 253, 253);
     background-color: #1a237e;
     opacity: 0.75;
 }
 
+.filter-submit-button {
+    margin-top: 25px;
+}
+
 .entry-stroke {
     font-size: 1.1rem;
     padding-right: 10px;
+}
+
+/* Edit Entry Page
+-------------------------------------------------------------------- */
+
+.submit-edit-button {
+    margin-right: 25px;
+}
+
+.cancel-edit-button {
+    margin-left: 25px;
+}
+
+/* Media Queries
+-------------------------------------------------------------------- */
+
+@media screen and (max-width: 350px) {
+    .filter-submit-button {
+        width: 25%;
+        font-size: 0.5rem
+    };
 }
