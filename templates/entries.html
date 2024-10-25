@@ -4,19 +4,19 @@
     <!-- Stroke tabs -->
     <div class="row">
         <div class="col s12">
-            <ul class="tabs">
-                <li class="tab col s3"><a class="active" href="#freestyle-tab">Freestyle</a></li>
-                <li class="tab col s3"><a href="#backstroke-tab">Backstroke</a></li>
-                <li class="tab col s3"><a href="#breaststroke-tab">Breaststroke</a></li>
-                <li class="tab col s3"><a href="#butterfly-tab">Butterfly</a></li>
+            <ul class="tabs cyan darken-1">
+                <li class="tab col s3"><a class="active white-text" href="#freestyle-tab">Freestyle</a></li>
+                <li class="tab col s3"><a class="white-text" href="#backstroke-tab">Backstroke</a></li>
+                <li class="tab col s3"><a class="white-text" href="#breaststroke-tab">Breaststroke</a></li>
+                <li class="tab col s3"><a class="white-text" href="#butterfly-tab">Butterfly</a></li>
             </ul>
         </div>
 
-        <!-- I want to add a kind of sort or filter thing here to allow the user to sort entries by time ascending or date, and with the differet distances etc -->
+        <!-- Filter Distance Form -->
         <form action="{{ url_for('get_entries') }}" method="POST">
             <div id="entry-filter">
                 <!-- Filter for race distances -->
-                <div class="input-field col s3 offset-s3">
+                <div class="input-field col s4 offset-s1">
                     <select name="distance-filter" id="distance-filter">
                         <option value="" disabled selected>-------</option>
                         <option value="25m">25m</option>
@@ -24,10 +24,10 @@
                         <option value="100m">100m</option>
                         <option value="200m">200m</option>
                     </select>
-                    <label for="distance-filter">Filter Distance</label>
+                    <label for="distance-filter" class="white-text filter-label">Filter Distance</label>
                 </div>
                 <!-- Filter for Date and Time -->
-                <div class="input-field col s3">
+                <div class="input-field col s4">
                     <select name="date-time-filter" id="date-time-filter">
                         <option value="" disabled selected>-------</option>
                         <option value="time-fastest">Time (Fastest to Slowest)</option>
@@ -35,7 +35,7 @@
                         <option value="date-latest">Date (Latest to Earliest)</option>
                         <option value="date-earliest">Date (Earliest to Latest)</option>
                     </select>
-                    <label for="date-time-filter">Filter By Time/Date</label>
+                    <label for="date-time-filter" class="white-text">Filter By Time/Date</label>
                 </div>
                 <div>
                     <button type="submit">Apply Filter</button>
