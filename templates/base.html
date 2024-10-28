@@ -24,7 +24,7 @@
         <!-- Navbar -->
         <nav>
             <div class="nav-wrapper indigo darken-4">
-                <a href="#" class="brand-logo center">SwimTimes</a>
+                <a href="{{ url_for('welcome') }}" class="brand-logo center">SwimTimes</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="left hide-on-med-and-down">
                     {% if session.user %}
