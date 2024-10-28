@@ -163,11 +163,59 @@ I used [MongoDB](https://www.mongodb.com/) for my databasing needs. MongoDB is a
 
 ## Deployment
 
+The site was deployed on [Heroku] (note for future, may migrate to somewhere that offers free service when the college credits run out).
+
+To deploy on Heroku, the project needs a requirements.txt file and a Procfile. The requirements.txt contains applications and dependecies to run the app and the Procfile tells Heroku which files actually run the app and how it's run.
+
+* Create requirements.txt by using the following code in the terminal: `pip3 freeze > requirements.txt`
+
+* Create the Procfile by using the following code in the terminal: `echo web: python app.py > Procfile`
+    * Procfile has a capital P and no extension (.xxx) at the end.
+    * Check the Procfile and make sure there's no blank line underneath the contents. If so, remove the blank line and save the file.
+
+* Log in to [Heroku]().
+
+* Click "New" in the top right corner of the screen and then "Create new app". Create a name for the app, which must be unique so consider adding your initials to the name. Select a region and click create app.
+
+* Connect Heroku app to the Github repository by navigating to "Deploy", down to "Deployment Method" and click on Github. Find the correct repository for the project and click connect.
+
+* Once connected, Heroku requires certain configuration variables to build the app. To sort this out, click on "Settings" tab, navigate down to the Config Vars section and click the "Reveal Config Vars" button. In here, you need to add the key and value variables stored in the env.py file.
+
+| Key | Value |
+|:---: | :---: |
+| IP | 0.0.0.0 |
+| PORT | 5000 |
+| SECRET_KEY | {your SECRET_KEY goes here} |
+| MONGO_URI | {your MONGO_URI goes here} |
+| MONGO_DBNAME | {your MONGO_DBNAME goes here } |
+
+* Navigate to "Deploy" tab and scroll down to Automatic deploys. You can now enable automatic deploys and Heroku will begin building the app.
+
+* Navigate to "Settings" and scroll down to Domains, which allows you add a custom domain.
+
 ### Local Deployment
+
+To create a local copy of the site, you can clone or fork this repository.
 
 ### Cloning
 
+To clone the repository:
+
+* Go to the Github repository for the site [here](https://github.com/seanbrindley17/milestone-project-3-mk2).
+* Click on the green Code button above the files. ![screenshot of code button](/readme-documentation/screenshots/general/github%20green%20code%20button.png)
+* From the dropdown, select which remote repository URL you'd like to use from HTTPS, SSH or Github CLI, then click the copy url button.
+* Open the Terminal in your code editor and change the current working directory to the location you want the cloned repository to go.
+* In the Terminal, type git clone followed by the link you copied earlier from the repository.
+* Press enter.
+
 ### Forking
+
+To fork this repository:
+
+* Log into your Github account and go to the Github repository for the site [here](https://github.com/seanbrindley17/milestone-project-3-mk2).
+* Locate the Fork button near the top of the page and click it. (Greyed out for me because I own it of course). ![screenshot of fork button](/readme-documentation/screenshots/general/github%20fork%20button.png)
+* On the next page, you can change the name to distinguish it from the original. Once done, click Create Fork to create a copy of the repository to your Github account. 
+
 
 ## Credits
 
