@@ -9,6 +9,7 @@
     <div class="card-panel center-align indigo darken-4">
       <h3 class="center-align white-text">Edit Entry</h3>
       <div class="row">
+
         <!-- Stroke -->
         <div class="input-field col s6">
           <select name="stroke_name" id="stroke_name">
@@ -23,6 +24,7 @@
           </select>
           <label for="stroke_name" class="white-text">Stroke</label>
         </div>
+
         <!-- Distance -->
         <div class="input-field col s6">
           <select name="distance" id="distance" required>
@@ -38,6 +40,7 @@
           <label for="distance" class="white-text">Distance</label>
         </div>
       </div>
+
       <!-- Time -->
       <div class="row">
         <div class="input-field col s4">
@@ -54,19 +57,21 @@
           <label for="milliseconds" class="white-text">Milliseconds (00)</label>
         </div>
       </div>
+
       <!-- Date -->
-      <div class="row">
-        <div class="input-field col s6"></div>
+      <div class="input-field col s6 offset-s3">
         <input id="swim_date" name="swim_date" value="{{ entry.date }}" type="text" class="datepicker" required>
         <label for="swim_date" class="white-text">Date</label>
       </div>
+
       <!-- Submit -->
       <div class="row">
         <div class="col s12">
+          <!-- Confirm Edit button -->
           <button type="submit" class="btn-flat cyan darken-1 white-text submit-edit-button">
             Edit Entry
           </button>
-          <!-- Cancel Edit -->
+          <!-- Cancel Edit button -->
           <a href="{{ url_for('get_entries') }}" class="btn-flat cyan darken-3 white-text cancel-edit-button">Cancel</a>
         </div>
       </div>
