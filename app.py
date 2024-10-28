@@ -52,6 +52,8 @@ def get_entries():
 @app.route("/")
 @app.route("/welcome")
 def welcome():
+    if session:
+        return redirect(url_for("get_entries"))
     return render_template("welcome.html")
 
 
