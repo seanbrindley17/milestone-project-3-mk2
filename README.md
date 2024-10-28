@@ -101,6 +101,7 @@ In my site I used icons from [FontAwesome](https://fontawesome.com/) to make my 
 * [This guide](https://www.geeksforgeeks.org/python-string-split/) on GeeksForGeeks explaining the split() function in a little more detail allowing me to work out how to prepopulate my race time input fields in the edit_entry() function.
 
 * To try and sort out my dates and times and make them more easily sortable, I used [This guide on DateTime](https://docs.python.org/3/library/datetime.html#datetime.datetime) from Python's own documentation and [This guide on strptime()](https://www.ibm.com/docs/en/i/7.5?topic=functions-strptime-convert-string-datetime) from IBM.
+    * HOWEVER, I didn't end up using this. So some of my commits will have this code in but not my finished project.
 
 ### Code Used From Outside Sources
 
