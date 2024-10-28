@@ -28,6 +28,18 @@ Wireframes were created on balsamiq for desktop, tablet and mobile displays.
 
 ![log out page wireframe](/readme-documentation/wireframes/Log%20Out.png)
 
+### User Journey Chart
+
+User journey was created using LucidChart
+
+![user journey](/readme-documentation/screenshots/user_journey/lucidchart%20user%20journey%20mp3.png)
+
+### Database Overview
+
+As I used MongoDB, a non relational database, there's no need for a true schema. I have provided a quick overview of what my database looks like.
+
+![database overview](/readme-documentation/screenshots/database_documentation/mongodb_collections/collections.png)
+
 ### Colours/Background
 
 As there's a theme of water, I decided to go for blue/green colours for my backgrounds.
