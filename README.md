@@ -60,19 +60,19 @@ As there's a theme of water, I decided to go for blue/green colours for my backg
 
 I used [Materialize's colour palette](https://materializecss.com/color.html) and will document the colour classes used from there below:
 
-* Where there is white text on darker backgrounds, I used Materialize's white-text class.
+* Where there is white text on darker backgrounds, I used Materialize's `white-text` class.
 
-* The main colour used as the background colour is #00acc1, corresponding to Materialize's "cyan darken-1" classes.
+* The main colour used as the background colour is `#00acc1`, corresponding to Materialize's `"cyan darken-1"` classes.
 
-* The colour used in the desktop navbar and all cards is #1a237e, corresponding to Materialize's "indigo darken-4" classes.
+* The colour used in the desktop navbar and all cards is `#1a237e`, corresponding to Materialize's `"indigo darken-4"` classes.
 
-* The colour used in the mobile navbar is #303f9f, corresponding to Materialize's "indigo darken-2" classes.
+* The colour used in the mobile navbar is `#303f9f`, corresponding to Materialize's `"indigo darken-2"` classes.
 
-* The colour used in my edit entry button on the entries.hmtl page is #1e88e5, corresponding to Materialize's "blue darken-1" classes.
+* The colour used in my edit entry button on the entries.hmtl page is `#1e88e5`, corresponding to Materialize's `"blue darken-1"` classes.
 
-* The colour used in my delete entry button on the entries.html page and cancel button on edit_entry.html is #00838f, corresponding to Materializes's "cyan darken-3" classes.
+* The colour used in my delete entry button on the entries.html page and cancel button on edit_entry.html is `#00838f`, corresponding to Materializes's `"cyan darken-3"` classes.
 
-* The colour used on my submit entry button on new_entry.html, log in button on login.html and login and register buttons on welcome.html is #00acc1, corresponding to Materialize's "cyan darken-1" classes.
+* The colour used on my submit entry button on new_entry.html, log in button on login.html and login and register buttons on welcome.html is `#00acc1`, corresponding to Materialize's `"cyan darken-1"` classes.
 
 ### Fonts
 
@@ -116,17 +116,17 @@ I used [MongoDB](https://www.mongodb.com/) for my databasing needs. MongoDB is a
 
 ##### Framework
 
-[Flask] - To use templating code and other built in features such as flash(), render_template() and redirect().
+* [Flask](https://flask.palletsprojects.com/en/stable/) - To use templating code and other built in features such as flash(), render_template() and redirect().
 
-[Materialize](https://materializecss.com) - For design work, using their rows and columns components.
+* [Materialize](https://materializecss.com) - For design work, using their rows and columns components.
 
 ##### Libraries and Packages
 
-[PyMongo](https://pypi.org/project/pymongo/) - Python driver for MongoDB.
+* [PyMongo](https://pypi.org/project/pymongo/) - Python driver for MongoDB.
 
-[bson.ObjectID](https://www.mongodb.com/docs/manual/reference/method/ObjectId/) - To allow MongoDB to use _id as a unique identifier.
+* [bson.ObjectID](https://www.mongodb.com/docs/manual/reference/method/ObjectId/) - To allow MongoDB to use _id as a unique identifier.
 
-[Werkzeug](https://werkzeug.palletsprojects.com/en/stable/) - For password hashing.
+* [Werkzeug](https://werkzeug.palletsprojects.com/en/stable/) - For password hashing.
 
 ##### Software
 
@@ -163,7 +163,7 @@ I used [MongoDB](https://www.mongodb.com/) for my databasing needs. MongoDB is a
 
 ## Deployment
 
-The site was deployed on [Heroku] (note for future, may migrate to somewhere that offers free service when the college credits run out).
+The site was deployed on [Heroku](https://www.heroku.com/) (note for future, may migrate to somewhere that offers free service when the college credits run out).
 
 To deploy on Heroku, the project needs a requirements.txt file and a Procfile. The requirements.txt contains applications and dependecies to run the app and the Procfile tells Heroku which files actually run the app and how it's run.
 
@@ -173,7 +173,7 @@ To deploy on Heroku, the project needs a requirements.txt file and a Procfile. T
     * Procfile has a capital P and no extension (.xxx) at the end.
     * Check the Procfile and make sure there's no blank line underneath the contents. If so, remove the blank line and save the file.
 
-* Log in to [Heroku]().
+* Log in to [Heroku](https://www.heroku.com/).
 
 * Click "New" in the top right corner of the screen and then "Create new app". Create a name for the app, which must be unique so consider adding your initials to the name. Select a region and click create app.
 
