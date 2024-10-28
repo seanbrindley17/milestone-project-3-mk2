@@ -6,11 +6,25 @@
 
 ### Project Goal
 
+When brainstorming ideas for a database project, SwimTimes was the first idea I had. I am a competitive swimmer and have been involved with various swimming clubs since 2006. In that time I have accrued a lot of timed swims and therefore data which could be used for a database project. I thought that a simple time storing site like this would be perfect as it allows me to use the skills I've learned in the example projects to start me off and also challenge myself using new aspects that weren't covered in the walkthroughs. In the future, with greater knowledge and more Python skills, I'd like to come back and refine this to include more functionality such a graphing time progression, but that will have to wait until a future date.
+
+The site was built with a simple design and colour palette, and not too many complex moving parts as for me I want to be able to come back to the project, look at the code and be able to understand what's going on. 
+
 ## User Stories
+
+My site is targetted at club swimmers and casual swimmers who want to keep track of times.
 
 ### New Site Users
 
+* As a first time user I want to understand what the site is for.
+* As a first time user I want to be able to quickly and easily register for an account.
+* As a first time user I want to easily be able to add entries and see them on my home page.
+
 ### Returning Site Users
+
+* As a returning user I want to be able to log in to my account and view my entries created previously.
+* As a returning user I want to be able to create more entries, edit entries and delete ones when I so please.
+* As a returning user I want to be able to use the filter to filter my entries to the search criterea chosen.
 
 ## Design
 
@@ -42,7 +56,7 @@ As I used MongoDB, a non relational database, there's no need for a true schema.
 
 ### Colours/Background
 
-As there's a theme of water, I decided to go for blue/green colours for my backgrounds.
+As there's a theme of water, I decided to go for blue/green colours for my backgrounds and decided against water-based background images on the grounds that it would make the text more washed out in places. Plus I prefer simple things.
 
 I used [Materialize's colour palette](https://materializecss.com/color.html) and will document the colour classes used from there below:
 
