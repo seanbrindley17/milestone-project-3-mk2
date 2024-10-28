@@ -30,7 +30,7 @@ My site is targetted at club swimmers and casual swimmers who want to keep track
 
 ### Wireframes
 
-Wireframes were created on balsamiq for desktop, tablet and mobile displays.
+Wireframes were created on [balsamiq](https://balsamiq.com/) for desktop, tablet and mobile displays.
 
 ![register page wireframe](/readme-documentation/wireframes/Register.png)
 
@@ -44,13 +44,13 @@ Wireframes were created on balsamiq for desktop, tablet and mobile displays.
 
 ### User Journey Chart
 
-User journey was created using LucidChart
+User journey was created using [LucidChart](https://lucid.app/).
 
 ![user journey](/readme-documentation/screenshots/user_journey/lucidchart%20user%20journey%20mp3.png)
 
 ### Database Overview
 
-As I used MongoDB, a non relational database, there's no need for a true schema. I have provided a quick overview of what my database looks like.
+As I used [MongoDB](https://www.mongodb.com/), a non relational database, there's no need for a true schema. I have provided a quick overview of what my database looks like.
 
 ![database overview](/readme-documentation/screenshots/database_documentation/mongodb_collections/collections.png)
 
@@ -100,7 +100,58 @@ In my site I used icons from [FontAwesome](https://fontawesome.com/) to make my 
 
 #### Coding Languages Used
 
+* HTML - For site content.
+
+* CSS - For site design and layout.
+
+* Javascript - To initialise Materialize components using JQuery.
+
+* Python - For site interactivity and dynamic elements.
+
+#### Databases Used
+
+I used [MongoDB](https://www.mongodb.com/) for my databasing needs. MongoDB is a non-relational database system.
+
 #### Software and Programs Used
+
+##### Framework
+
+[Flask] - To use templating code and other built in features such as flash(), render_template() and redirect().
+
+[Materialize](https://materializecss.com) - For design work, using their rows and columns components.
+
+##### Libraries and Packages
+
+[PyMongo](https://pypi.org/project/pymongo/) - Python driver for MongoDB.
+
+[bson.ObjectID](https://www.mongodb.com/docs/manual/reference/method/ObjectId/) - To allow MongoDB to use _id as a unique identifier.
+
+[Werkzeug](https://werkzeug.palletsprojects.com/en/stable/) - For password hashing.
+
+##### Software
+
+* [VSCode](https://code.visualstudio.com/) - IDE used to create project.
+
+* [Google Fonts](https://fonts.google.com/) - Location of fonts used.
+
+* [Font Awesome](https://fontawesome.com/) - Location of icons used.
+
+* [Materialize](https://materializecss.com) - Location of design framework used.
+
+* [Chrome](https://www.google.com/intl/en_uk/chrome/) - My default browser.
+    * Chrome Dev Tools - For debugging and troubleshooting,
+
+* [Git](https://git-scm.com/) - Version control.
+
+* [Github](https://github.com/) - Secure code storage.
+
+* [Heroku](https://www.heroku.com/) - Deployment.
+
+* [balsamiq](https://balsamiq.com/) - To create the wireframes.
+
+* [LucidChart](https://lucid.app/) - To create the user journey.
+
+* [Snipping Tool](https://support.microsoft.com/en-us/windows/use-snipping-tool-to-capture-screenshots-00246869-1843-655f-f220-97299b865f6b) - To crop and save screenshots.
 
 ## Features
 
