@@ -68,6 +68,21 @@
     opacity: 0.75;
 }
 
+.input-field [type=text]{
+    color: white !important;
+    font-family: "Oxanium", sans-serif !important;
+}
+
+.input-field [type=number]{
+    color: white !important;
+    font-family: "Oxanium", sans-serif !important;
+}
+
+input#swim_date {
+    color: white;
+    font-family: "Oxanium", sans-serif;
+}
+
 .filter-submit-button {
     margin-top: 25px;
 }
