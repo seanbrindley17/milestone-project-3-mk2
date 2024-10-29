@@ -256,6 +256,8 @@ To fork this repository:
 
 * I used [this post on AdvancedCustomFields.com](https://support.advancedcustomfields.com/forums/topic/datepicker-disable-selecting-future-dates/#post-60753) to make it so that a user couldn't pick a date in the future in my date picker.
 
+* I used [this post on GeeksForGeeks](https://www.geeksforgeeks.org/how-to-replace-text-with-css/) for help with changing text in elements at different screen sizes.
+
 #### Materialize.com
 
 I used Materialize as the framework for this project using their code and JQuery initialisation. Components used will be listed here. JQuery initialisation is commented as such on the script.js file.
