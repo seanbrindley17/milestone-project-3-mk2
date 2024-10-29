@@ -92,6 +92,75 @@ input#swim_date {
     padding-right: 10px;
 }
 
+/* entries.html Media Queries
+-------------------------------------------------------------------- */
+
+@media screen and (max-width: 350px) {
+    .filter-submit-button {
+        width: 25%;
+        font-size: 0.5rem
+    };
+}
+
+@media screen and (max-width: 450px) {
+    .entry-date {
+        font-size: 0.8rem;
+    }
+
+    .entry-details {
+        font-size: 0.8rem;
+    }
+
+    .entry-stroke {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .entry-buttons {
+        margin-top: 5px;
+    }
+}
+
+@media screen and (min-width: 532px) {
+    .freestyle-top-tab {
+        visibility: hidden;
+    }
+
+    .freestyle-top-tab::after {
+        visibility: visible;
+        content: "Freestyle";
+    }
+
+    .backstroke-top-tab {
+        visibility: hidden;
+    }
+
+    .backstroke-top-tab::after {
+        visibility: visible;
+        content: "Backstroke";
+    }
+
+    .breaststroke-top-tab {
+        visibility: hidden;
+        position: relative;
+    }
+
+    .breaststroke-top-tab:after {
+        visibility: visible;
+        content: "Breaststroke";
+    }
+
+    .butterfly-top-tab {
+        visibility: hidden;
+    }
+
+    .butterfly-top-tab::after {
+        visibility: visible;
+        content: "Butterfly";
+    }
+}
+
 /* Edit Entry Page
 -------------------------------------------------------------------- */
 
@@ -101,14 +170,4 @@ input#swim_date {
 
 .cancel-edit-button {
     margin-left: 25px;
-}
-
-/* Media Queries
--------------------------------------------------------------------- */
-
-@media screen and (max-width: 350px) {
-    .filter-submit-button {
-        width: 25%;
-        font-size: 0.5rem
-    };
 }
