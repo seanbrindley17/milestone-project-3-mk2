@@ -29,6 +29,7 @@ Return to [README.md](README.md).
 I didn't run into too many major bugs or issues that took any reasonable time to sort out, part of the joy of building simple. Most of the fixes came from tinkering with my Python code or making sure closing divs were in the right place. I tried not to use google too much for Python because the suggestions were things I had never seen before and would be able to understand which is a prerequisite for me as I want to understand what's going on.
 
 * My major issue is the filter sometimes not working, I have absolutely no idea why as the dates are stored the same way sometimes it works and sometimes it doesn't. Searching for a solution throws me ideas that a. don't make sense to me and b. don't work either.
+    * The issue seems to be that it's sorting by the day correctly but ignoring month and year.
 
 * Tried to include Materialize's footer on my Welcome page but couldn't get it to work properly and stick to the bottom.
     * I ended up fixing this by simply attaching the footer content to the card panel underneath the register and log in buttons. 
