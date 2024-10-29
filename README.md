@@ -1,6 +1,6 @@
 # Milestone Project 3
 
-http://swimtimes-mp3.com
+https://milestone-project-3-sb2-855f59c8cfc4.herokuapp.com/
 
 ## UX 
 
@@ -128,6 +128,8 @@ I used [MongoDB](https://www.mongodb.com/) for my databasing needs. MongoDB is a
 
 * [Werkzeug](https://werkzeug.palletsprojects.com/en/stable/) - For password hashing.
 
+* [JQuery]() - To initialize the Materialize components used.
+
 ##### Software
 
 * [VSCode](https://code.visualstudio.com/) - IDE used to create project.
@@ -160,6 +162,8 @@ I used [MongoDB](https://www.mongodb.com/) for my databasing needs. MongoDB is a
 ### Future Features
 
 ## Testing
+
+Testing was done on [TESTING.md](TESTING.md)
 
 ## Deployment
 
