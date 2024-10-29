@@ -161,6 +161,16 @@ I used [MongoDB](https://www.mongodb.com/) for my databasing needs. MongoDB is a
 
 ### Existing Features
 
+| Feature | Description | Screenshot |
+| :---: | :---: | :---: |
+| Navbar (logged out) | What a user who isn't logged in will see | ![screenshot of not log in navbar](/readme-documentation/screenshots/site_screenshots/logged%20out%20navbar.png) |
+| Navbar (logged in) | What a user who is logged in will see | ![screenshot of logged in navbar](/readme-documentation/screenshots/site_screenshots/logged%20in%20navbar.png) |
+| Navbar (logged out mobile) | What a user who isn't logged in will see on mobile | ![screenshot of not log in navbar mobile](/readme-documentation/screenshots/site_screenshots/logged%20out%20mobile%20navbar.png) |
+| Navbar (logged in mobile) | What a user who is logged in will see on mobile | ![screenshot of logged in navbar mobile](/readme-documentation/screenshots/site_screenshots/logged%20in%20mobile%20navbar.png) |
+| Welcome Box | The first thing a new user should see, brief overview of site as well as log in and register buttons | ![screenshot of welcome box](/readme-documentation/screenshots/site_screenshots/welcome%20box.png) |
+| Register Form | Register form for user to create account | ![screenshot of register form](/readme-documentation/screenshots/site_screenshots/registration%20form.png) |
+| Log In Form | Allows user to log into their account | ![screenshot of log in form](/readme-documentation/screenshots/site_screenshots/log%20in%20form.png) |
+
 ### Future Features
 
 ## Testing
