@@ -25,7 +25,7 @@
         <nav>
             <div class="nav-wrapper indigo darken-4">
                 <a href="{{ url_for('welcome') }}" class="brand-logo center">SwimTimes</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-circle-chevron-right"></i></a>
                 <ul id="nav-mobile" class="left hide-on-med-and-down">
                     {% if session.user %}
                         <li><a href="{{ url_for('get_entries') }}">Home <i class="fa-solid fa-water-ladder"></i></a></li>
