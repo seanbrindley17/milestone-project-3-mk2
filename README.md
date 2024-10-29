@@ -96,6 +96,8 @@ In my site I used icons from [FontAwesome](https://fontawesome.com/) to make my 
 
 * For the register link I used [this keyboard icon](https://fontawesome.com/icons/keyboard?f=classic&s=solid).
 
+* For the mobile collapsible navbar I used [this right arrow icon](https://fontawesome.com/icons/circle-chevron-right?f=classic&s=solid).
+
 ### Technology Used
 
 #### Coding Languages Used
