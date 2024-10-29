@@ -39,3 +39,7 @@ I didn't run into too many major bugs or issues that took any reasonable time to
 
 * In my `edit_entry.html` form, the date input field was taking up a full row despite me specifying `col s6 offset-s3` in the classes.
     * Turns out I had a closing `div` on the end of the line with the opening `div` instead of under the block of code I wanted the classes to apply to. This was the only closing div mistake that took me a while to catch.
+
+* The Materialize date picker does not work very well on mobile devices.
+
+* I couldn't work out how to make it so the flash() messages have something for the user to click on to get rid of them.
