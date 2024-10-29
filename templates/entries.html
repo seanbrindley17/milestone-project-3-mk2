@@ -5,10 +5,10 @@
     <div class="row">
         <div class="col s12">
             <ul class="tabs cyan darken-1">
-                <li class="tab col s3"><a class="active white-text" href="#freestyle-tab">Freestyle</a></li>
-                <li class="tab col s3"><a class="white-text" href="#backstroke-tab">Backstroke</a></li>
-                <li class="tab col s3"><a class="white-text" href="#breaststroke-tab">Breaststroke</a></li>
-                <li class="tab col s3"><a class="white-text" href="#butterfly-tab">Butterfly</a></li>
+                <li class="tab col s3"><a class="active white-text freestyle-top-tab" href="#freestyle-tab">Free</a></li>
+                <li class="tab col s3"><a class="white-text backstroke-top-tab" href="#backstroke-tab">Back</a></li>
+                <li class="tab col s3"><a class="white-text breaststroke-top-tab" href="#breaststroke-tab">Brst</a></li>
+                <li class="tab col s3"><a class="white-text butterfly-top-tab" href="#butterfly-tab">Fly</a></li>
             </ul>
         </div>
 
@@ -47,13 +47,13 @@
         <div id="freestyle-tab" class="col s12">
             {% for entry in entries %}
             {% if entry.stroke == "freestyle" %}
-            <div class="col s12 m8 offset-m2">
+            <div class="col s12 m10 offset-m1">
                 <div class="card horizontal">
                     <div class="card-stacked indigo darken-4">
                         <div class="card-content center-align">
-                            <span class="entry-date white-text left"><strong>{{ entry.date }}</strong></span>
-                            <span class="entry-details white-text center-align">{{ entry.distance }} <span class="entry-stroke">{{ entry.stroke.upper() }}:</span> {{ entry.time }}</span>
-                            <span class="entry-buttons right">
+                            <span class="entry-date white-text left col s5 m4"><strong>{{ entry.date }}</strong></span>
+                            <span class="entry-details white-text center-align col s7 m4">{{ entry.distance }} <span class="entry-stroke">{{ entry.stroke.upper() }}:</span> {{ entry.time }}</span>
+                            <span class="entry-buttons right col s12 m4">
                                 <a href="{{ url_for('edit_entry', entry_id=entry._id) }}" class="edit-entry-button btn-small blue darken-1">Edit</a>
                                 <a href="#delete-modal1" class="modal-trigger delete-button btn-small cyan darken-3">Delete</a>
                             </span>
