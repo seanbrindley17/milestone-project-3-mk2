@@ -83,6 +83,10 @@ input#swim_date {
     font-family: "Oxanium", sans-serif;
 }
 
+.datepicker-calendar-container {
+    background-color: rgb(129, 218, 210);
+}
+
 .filter-submit-button {
     margin-top: 25px;
 }
