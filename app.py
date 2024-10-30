@@ -4,6 +4,7 @@ from flask import Flask, flash, render_template, redirect, request, session, url
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from datetime import datetime
 if os.path.exists("env.py"):
     import env
 
@@ -33,9 +34,9 @@ def get_entries():
             entries = list(mongo.db.entries.find({"created_by": session["user"], "distance": distance_filter}))
             
         if date_time_filter == "date-latest":
-            entries = sorted(entries, key=lambda entry: entry[("date")], reverse=True)
+            entries = sorted(entries, key=lambda entry: entry["date"], reverse=True)
         elif date_time_filter == "date-earliest":
-            entries = sorted(entries, key=lambda entry: entry[("date")])
+            entries = sorted(entries, key=lambda entry: entry["date"])
         elif date_time_filter == "time-fastest":
             entries = sorted(entries, key=lambda entry: entry[("time")])
         elif date_time_filter == "time-slowest":
@@ -135,13 +136,17 @@ def add_new_entry():
             race_time = minutes + ":" + seconds + "." + milliseconds
             print(race_time)
             
+            date_str = request.form.get['swim_date']
+            formatted_date = datetime.strptime(date_str, '%d %B, %Y')
+            
             entry = {
                 "stroke": request.form.get("stroke_name"),
                 "distance": request.form.get("distance"),
                 "time": race_time,
-                "date": request.form.get("swim_date"),
+                "date": formatted_date,
                 "created_by": session["user"]
             }
+            print(formatted_date)
             mongo.db.entries.insert_one(entry)
             flash("Time Added")
             return redirect(url_for("get_entries"))
