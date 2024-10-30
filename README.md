@@ -243,6 +243,7 @@ To fork this repository:
 
 * To try and sort out my dates and times and make them more easily sortable, I used [This guide on DateTime](https://docs.python.org/3/library/datetime.html#datetime.datetime) from Python's own documentation and [This guide on strptime()](https://www.ibm.com/docs/en/i/7.5?topic=functions-strptime-convert-string-datetime) from IBM.
     * HOWEVER, I didn't end up using this. So some of my commits will have this code in but not my finished project.
+        * UPDATE: Decided to give this a go again as my filter wasn't being fixed by anything I tried. I used [this StackOverflow post](https://stackoverflow.com/questions/53248537/typeerror-not-supported-between-instances-of-datetime-datetime-and-str) and [this StackOverflow post](https://stackoverflow.com/questions/19887353/attributeerror-str-object-has-no-attribute-strftime) along with [this](https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior) and [this](https://docs.python.org/3/library/datetime.html#datetime.datetime.strftime) from Python's official docs to finally work it out and get the date filter working.
 
 ### Code Used From Outside Sources
 
