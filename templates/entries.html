@@ -51,7 +51,7 @@
                 <div class="card horizontal">
                     <div class="card-stacked indigo darken-4">
                         <div class="card-content center-align">
-                            <span class="entry-date white-text left col s5 m4"><strong>{{ entry.date }}</strong></span>
+                            <span class="entry-date white-text left col s5 m4"><strong>{{ entry.date.strftime('%d %B, %Y') }}</strong></span>
                             <span class="entry-details white-text center-align col s7 m4">{{ entry.distance }} <span class="entry-stroke">{{ entry.stroke.upper() }}:</span> {{ entry.time }}</span>
                             <span class="entry-buttons right col s12 m4">
                                 <a href="{{ url_for('edit_entry', entry_id=entry._id) }}" class="edit-entry-button btn-small blue darken-1">Edit</a>
@@ -67,7 +67,7 @@
                     <h4>Delete Entry</h4>
                     <p>Are you sure you wish to delete this entry:</p>
                     <em>
-                        <div class="entry-date"><strong>{{ entry.date }}</strong></div><br>
+                        <div class="entry-date"><strong>{{ entry.date.strftime('%d %B, %Y') }}</strong></div><br>
                         <div class="entry-details">{{ entry.distance }} {{ entry.stroke }}: {{ entry.time }}</div>
                     </em>
                 </div>
@@ -89,7 +89,7 @@
                     <div class="card horizontal">
                         <div class="card-stacked indigo darken-4">
                             <div class="card-content center-align">
-                                <span class="entry-date white-text left col s5 m4"><strong>{{ entry.date }}</strong></span>
+                                <span class="entry-date white-text left col s5 m4"><strong>{{ entry.date.strftime('%d %B, %Y') }}</strong></span>
                                 <span class="entry-details white-text center-align col s7 m4">{{ entry.distance }} <span class="entry-stroke">{{ entry.stroke.upper() }}:</span> {{ entry.time
                                     }}</span>
                                 <span class="entry-buttons right">
@@ -104,7 +104,7 @@
                     <div class="modal-content center-align">
                         <h4>Delete Entry</h4>
                         <p>Are you sure you wish to delete this entry:</p>
-                        <em><div class="entry-date"><strong>{{ entry.date }}</strong></div><br>
+                        <em><div class="entry-date"><strong>{{ entry.date.strftime('%d %B, %Y') }}</strong></div><br>
                         <div class="entry-details">{{ entry.distance }} {{ entry.stroke }}: {{ entry.time }}</div></em>
                     </div>
                     <div class="modal-footer">
@@ -125,7 +125,7 @@
                     <div class="card horizontal">
                         <div class="card-stacked indigo darken-4">
                             <div class="card-content center-align">
-                                <span class="entry-date white-text left col s5 m4"><strong>{{ entry.date }}</strong></span>
+                                <span class="entry-date white-text left col s5 m4"><strong>{{ entry.date.strftime('%d %B, %Y') }}</strong></span>
                                 <span class="entry-details white-text center-align col s7 m4">{{ entry.distance }} <span class="entry-stroke">{{ entry.stroke.upper() }}:</span> {{ entry.time
                                     }}</span>
                                 <span class="entry-buttons right">
@@ -140,7 +140,7 @@
                     <div class="modal-content center-align">
                         <h4>Delete Entry</h4>
                         <p>Are you sure you wish to delete this entry:</p>
-                        <em><div class="entry-date"><strong>{{ entry.date }}</strong></div><br>
+                        <em><div class="entry-date"><strong>{{ entry.date.strftime('%d %B, %Y') }}</strong></div><br>
                         <div class="entry-details">{{ entry.distance }} {{ entry.stroke }}: {{ entry.time }}</div></em>
                     </div>
                     <div class="modal-footer">
@@ -161,7 +161,7 @@
                     <div class="card horizontal">
                         <div class="card-stacked indigo darken-4">
                             <div class="card-content center-align">
-                                <span class="entry-date white-text left col s5 m4"><strong>{{ entry.date }}</strong></span>
+                                <span class="entry-date white-text left col s5 m4"><strong>{{ entry.date.strftime('%d %B, %Y') }}</strong></span>
                                 <span class="entry-details white-text center-align col s7 m4">{{ entry.distance }} <span class="entry-stroke">{{ entry.stroke.upper() }}:</span> {{ entry.time
                                     }}</span>
                                 <span class="entry-buttons right">
@@ -176,7 +176,7 @@
                     <div class="modal-content center-align">
                         <h4>Delete Entry</h4>
                         <p>Are you sure you wish to delete this entry:</p>
-                        <em><div class="entry-date"><strong>{{ entry.date }}</strong></div><br>
+                        <em><div class="entry-date"><strong>{{ entry.date.strftime('%d %B, %Y') }}</strong></div><br>
                         <div class="entry-details">{{ entry.distance }} {{ entry.stroke }}: {{ entry.time }}</div></em>
                     </div>
                     <div class="modal-footer">
