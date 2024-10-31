@@ -170,11 +170,14 @@ def edit_entry(entry_id):
             milliseconds = request.form.get("milliseconds")
             race_time = minutes + ":" + seconds + "." + milliseconds
             
+            date_str = request.form.get('swim_date')
+            formatted_date = datetime.strptime(date_str, '%d %B, %Y')
+            
             edited_entry = {
                 "stroke": request.form.get("stroke_name"),
                 "distance": request.form.get("distance"),
                 "time": race_time,
-                "date": request.form.get("swim_date"),
+                "date": formatted_date,
                 "created_by": session["user"]
             }
             mongo.db.entries.replace_one({"_id": ObjectId(entry_id)}, edited_entry)
