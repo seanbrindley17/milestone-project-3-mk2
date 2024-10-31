@@ -60,7 +60,7 @@
 
       <!-- Date -->
       <div class="input-field col s6 offset-s3">
-        <input id="swim_date" name="swim_date" value="{{ entry.date }}" type="text" class="datepicker" required>
+        <input id="swim_date" name="swim_date" value="{{ entry.date.strftime('%d %B, %Y') }}" type="text" class="datepicker" required>
         <label for="swim_date" class="white-text">Date</label>
       </div>
 
