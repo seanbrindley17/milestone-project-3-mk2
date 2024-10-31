@@ -259,6 +259,8 @@ To fork this repository:
 
 * I used [this post on GeeksForGeeks](https://www.geeksforgeeks.org/how-to-replace-text-with-css/) for help with changing text in elements at different screen sizes.
 
+* I used [this page on Medium](https://medium.com/@zerox/keep-that-damn-footer-at-the-bottom-c7a921cb9551) to help with getting my footer to stay at the bottom.
+
 #### Materialize.com
 
 I used Materialize as the framework for this project using their code and JQuery initialisation. Components used will be listed here. JQuery initialisation is commented as such on the script.js file.
