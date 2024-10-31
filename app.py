@@ -1,10 +1,10 @@
 import os
 
+from datetime import datetime
 from flask import Flask, flash, render_template, redirect, request, session, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
-from datetime import datetime
 if os.path.exists("env.py"):
     import env
 
@@ -24,9 +24,7 @@ mongo = PyMongo(app)
 def get_entries():
     if request.method == "POST":
         distance_filter = request.form.get("distance-filter")
-        print(distance_filter)
         date_time_filter = request.form.get("date-time-filter")
-        print(date_time_filter)
         
         entries = list(mongo.db.entries.find({"created_by": session["user"]}))
         
@@ -134,10 +132,9 @@ def add_new_entry():
             
             # Want to make it so only accepts two digits in each field to make consistent format
             race_time = minutes + ":" + seconds + "." + milliseconds
-            print(race_time)
             
-            date_str = request.form.get['swim_date']
-            formatted_date = datetime.strptime(date_str, '%d %B, %Y')
+            date_str = request.form.get["swim_date"]
+            formatted_date = datetime.strptime(date_str, "%d %B, %Y")
             
             entry = {
                 "stroke": request.form.get("stroke_name"),
@@ -146,7 +143,6 @@ def add_new_entry():
                 "date": formatted_date,
                 "created_by": session["user"]
             }
-            print(formatted_date)
             mongo.db.entries.insert_one(entry)
             flash("Time Added")
             return redirect(url_for("get_entries"))
@@ -170,8 +166,8 @@ def edit_entry(entry_id):
             milliseconds = request.form.get("milliseconds")
             race_time = minutes + ":" + seconds + "." + milliseconds
             
-            date_str = request.form.get('swim_date')
-            formatted_date = datetime.strptime(date_str, '%d %B, %Y')
+            date_str = request.form.get("swim_date")
+            formatted_date = datetime.strptime(date_str, "%d %B, %Y")
             
             edited_entry = {
                 "stroke": request.form.get("stroke_name"),
@@ -187,12 +183,9 @@ def edit_entry(entry_id):
     entry = mongo.db.entries.find_one({"_id": ObjectId(entry_id)})
     race_time_split = entry["time"].split(":")
     minutes = race_time_split[0]
-    print(minutes)
     race_time_split_seconds = race_time_split[1].split(".")
     seconds = race_time_split_seconds[0]
     milliseconds = race_time_split_seconds[1]
-    print(seconds)
-    print(milliseconds)
     
     strokes = mongo.db.strokes.find()
     distances = mongo.db.distances.find()
