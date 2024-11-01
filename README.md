@@ -171,9 +171,21 @@ I used [MongoDB](https://www.mongodb.com/) for my databasing needs. MongoDB is a
 | Navbar (logged in) | What a user who is logged in will see | ![screenshot of logged in navbar](/readme-documentation/screenshots/site_screenshots/logged%20in%20navbar.png) |
 | Navbar (logged out mobile) | What a user who isn't logged in will see on mobile | ![screenshot of not log in navbar mobile](/readme-documentation/screenshots/site_screenshots/logged%20out%20mobile%20navbar.png) |
 | Navbar (logged in mobile) | What a user who is logged in will see on mobile | ![screenshot of logged in navbar mobile](/readme-documentation/screenshots/site_screenshots/logged%20in%20mobile%20navbar.png) |
-| Welcome Box | The first thing a new user should see, brief overview of site as well as log in and register buttons | ![screenshot of welcome box](/readme-documentation/screenshots/site_screenshots/welcome%20box.png) |
+| Page Title | Is a link to home page or welcome page depending on log in status | ![screenshot of title](/readme-documentation/screenshots/site_screenshots/title.png) |
+| Welcome Box | The first thing a new user should see, brief overview of site as well as log in and register buttons | ![screenshot of welcome box](/readme-documentation/screenshots/site_screenshots/welcome%20box%20v2.png) |
 | Register Form | Register form for user to create account | ![screenshot of register form](/readme-documentation/screenshots/site_screenshots/registration%20form.png) |
 | Log In Form | Allows user to log into their account | ![screenshot of log in form](/readme-documentation/screenshots/site_screenshots/log%20in%20form.png) |
+| Flash Message | Flashes a message when the user completes various actions such as logging in | ![screenshot of flash message](/readme-documentation/screenshots/site_screenshots/flash%20message.png) |
+| Stroke Tabs | Displays the user's entries based on the swimming stroke chosen | ![screenshot of stroke tabs](/readme-documentation/screenshots/site_screenshots/stroke%20tabs.png) |
+| Filter | Allows the user to filter their entries based on distance or date/time | ![screenshot of filter](/readme-documentation/screenshots/site_screenshots/filter.png) |
+| Distance Filter | The distances a user can filter | ![screenshot of distance filter](/readme-documentation/screenshots/site_screenshots/distance%20filter.png) |
+| Date/Time Filter | Allows user to filter by date or race time | ![screenshot of race/time filter](/readme-documentation/screenshots/site_screenshots/date%20and%20time%20filter.png) |
+| Entry | Displays the entry created to the user with date, distance, stroke and time. Also Edit and Delete buttons | ![screenshot of entry](/readme-documentation/screenshots/site_screenshots/entry.png) |
+| Add New Entry Form | Allows user to add new entry using fields provided | ![screenshot of add new entry form](/readme-documentation/screenshots/site_screenshots/add%20new%20entry.png) |
+| Edit Entry Form | Allows user to edit an entry and prefills fields to show the entry being edited | ![screenshot of edit entry form](/readme-documentation/screenshots/site_screenshots/edit%20entry%20form.png) |
+| Delete Entry Modal | Pops up when user clicks delete on an entry | ![screenshot of delete modal](/readme-documentation/screenshots/site_screenshots/delete%20modal.png) |
+| Log Out Modal | Pops up when user clicks on Log Out | ![screenshot of logout modal](/readme-documentation/screenshots/site_screenshots/log%20out%20modal.png) |
+
 
 ### Future Features
 
