@@ -16,6 +16,8 @@ Return to [README.md](README.md).
 | login.html | ![screenshot of login.html with only jinja errors](/readme-documentation/screenshots/validation_screenshots/html/log%20in%20page%20initial%20errors.png) | All errors due to Jinja templating and can therefore be ignored. |
 | entries.html | ![screenshot of entries.html errors](/readme-documentation/screenshots/validation_screenshots/html/entries%20page%20initial%20errors.png) | Most errors from Jinja templating, others from Materialize classes like `col` and `s4`. These can be ignored. Some errors due to syntax which will be fixed. |
 | entries.html | ![screenshot of entries.html with only jinja and materialize errors](/readme-documentation/screenshots/validation_screenshots/html/entries%20page%20syntax%20errors%20fixed.png) | Fixed syntax errors by removing the `em` element in the delete modals and by putting a closing `span` tag where they were missing under the individual tab code for the edit and delete buttons. |
+| new_entry.html | ![screenshot of new_entry.html with only jinja errors] | All errors due to Jinja templating and therefore can be ignored. |
+
 
 ### CSS
 
