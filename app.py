@@ -25,12 +25,10 @@ def get_entries():
     if request.method == "POST":
         distance_filter = request.form.get("distance-filter")
         date_time_filter = request.form.get("date-time-filter")
-        
         entries = list(mongo.db.entries.find({"created_by": session["user"]}))
-        
         if distance_filter:
-            entries = list(mongo.db.entries.find({"created_by": session["user"], "distance": distance_filter}))
-            
+            entries = list(mongo.db.entries.find(
+                {"created_by": session["user"], "distance": distance_filter}))
         if date_time_filter == "date-latest":
             entries = sorted(entries, key=lambda entry: entry["date"], reverse=True)
         elif date_time_filter == "date-earliest":
@@ -39,9 +37,7 @@ def get_entries():
             entries = sorted(entries, key=lambda entry: entry[("time")])
         elif date_time_filter == "time-slowest":
             entries = sorted(entries, key=lambda entry: entry[("time")], reverse=True)
-            
         return render_template("entries.html", entries=entries)
-    
     entries = list(mongo.db.entries.find({"created_by": session["user"]}))
     return render_template("entries.html", entries=entries)
 
@@ -60,19 +56,15 @@ def welcome():
 def register():
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
-        {"username": request.form.get("username").lower()})
-            
+        {"username": request.form.get("username").lower()}) 
         if existing_user:
             flash("Username already exists, please try another")
             return redirect(url_for("register"))
-        
         password = request.form.get("password")
         confirm_password = request.form.get("confirm_password")
-        
         if password != confirm_password:
             flash("Passwords don't match")
             return redirect(url_for("register"))
-        
         registered_user = {
             "first_name": request.form.get("first_name"),
             "last_name": request.form.get("last_name"),
@@ -80,7 +72,6 @@ def register():
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(registered_user)
-        
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful")
         return redirect(url_for("get_entries"))
@@ -92,22 +83,16 @@ def register():
 def login():
     if request.method == "POST":
         existing_user = mongo.db.users.find_one({"username": request.form.get("username").lower()})
-        
         if existing_user:
             if check_password_hash(existing_user["password"], request.form.get("password")):
                 display_name = existing_user["first_name"]
                 session["user"] = request.form.get("username").lower()
                 flash(f"Welcome back, {display_name}")
                 return redirect(url_for("get_entries"))
-            
-            
             flash("Incorrect username or password")
             return redirect(url_for("login"))
-            
-        
         flash("Incorrect username or password")
         return redirect(url_for("login"))
-    
     return render_template("login.html")
 
 
@@ -129,13 +114,9 @@ def add_new_entry():
             minutes = request.form.get("minutes")
             seconds = request.form.get("seconds")
             milliseconds = request.form.get("milliseconds")
-            
-            # Want to make it so only accepts two digits in each field to make consistent format
             race_time = minutes + ":" + seconds + "." + milliseconds
-            
             date_str = request.form.get["swim_date"]
             formatted_date = datetime.strptime(date_str, "%d %B, %Y")
-            
             entry = {
                 "stroke": request.form.get("stroke_name"),
                 "distance": request.form.get("distance"),
@@ -146,10 +127,8 @@ def add_new_entry():
             mongo.db.entries.insert_one(entry)
             flash("Time Added")
             return redirect(url_for("get_entries"))
-        else:
-            flash("Log in to add an entry")
-            return redirect(url_for("login"))
-    
+        flash("Log in to add an entry")
+        return redirect(url_for("login"))
     strokes = mongo.db.strokes.find()
     distances = mongo.db.distances.find()
     return render_template("new_entry.html", strokes=strokes, distances=distances)
@@ -160,15 +139,12 @@ def add_new_entry():
 def edit_entry(entry_id):
     if request.method == "POST":
         if "user" in session:
-        
             minutes = request.form.get("minutes")
             seconds = request.form.get("seconds")
             milliseconds = request.form.get("milliseconds")
             race_time = minutes + ":" + seconds + "." + milliseconds
-            
             date_str = request.form.get("swim_date")
             formatted_date = datetime.strptime(date_str, "%d %B, %Y")
-            
             edited_entry = {
                 "stroke": request.form.get("stroke_name"),
                 "distance": request.form.get("distance"),
@@ -179,14 +155,12 @@ def edit_entry(entry_id):
             mongo.db.entries.replace_one({"_id": ObjectId(entry_id)}, edited_entry)
             flash("Entry Edited")
             return redirect(url_for("get_entries"))
-    
     entry = mongo.db.entries.find_one({"_id": ObjectId(entry_id)})
     race_time_split = entry["time"].split(":")
     minutes = race_time_split[0]
     race_time_split_seconds = race_time_split[1].split(".")
     seconds = race_time_split_seconds[0]
     milliseconds = race_time_split_seconds[1]
-    
     strokes = mongo.db.strokes.find()
     distances = mongo.db.distances.find()
     return render_template("edit_entry.html", entry=entry, strokes=strokes, distances=distances, minutes=minutes, seconds=seconds, milliseconds=milliseconds)
