@@ -8,6 +8,12 @@ Return to [README.md](README.md).
 
 ### CSS
 
+| File | Screenshot | Notes |
+| :---: | :---: | :---: |
+| static/css/style.css | ![screenshot of initial css validation](/readme-documentation/screenshots/validation_screenshots/css/css%20initial%20validation.png) | Some errors resulting from semi colons being in the wrong place. |
+| static/css/style.css | ![screenshot of css validation pass](/readme-documentation/screenshots/validation_screenshots/css/css%20validation%20pass.png) | Fixed by moving the semi colons into the correct place. No other errors found. |
+
+
 ### Javascript
 
 ### Python
