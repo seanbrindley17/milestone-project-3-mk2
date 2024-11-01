@@ -13,6 +13,9 @@ Return to [README.md](README.md).
 | welcome.html | ![screenshot of welcome.html with only jinja errors](/readme-documentation/screenshots/validation_screenshots/html/welcome%20page%20h2%20inside%20span%20fixed.png) | Fixed by moving the h2 element outside of the span element. |
 | register.html | ![screenshot of register.html errors](/readme-documentation/screenshots/validation_screenshots/html/register%20page%20initial%20errors.png) | All but one error due to Jinja templating. The other was because I used a closing h2 tag for a h3 element. |
 | register.html | ![screenshot of register.html with only jinja errors](/readme-documentation/screenshots/validation_screenshots/html/register%20page%20h3%20element%20fixed.png) | Fixed by replacing closing h2 tag with correct closing h3 tag. |
+| login.html | ![screenshot of login.html with only jinja errors](/readme-documentation/screenshots/validation_screenshots/html/log%20in%20page%20initial%20errors.png) | All errors due to Jinja templating and can therefore be ignored. |
+| entries.html | ![screenshot of entries.html errors](/readme-documentation/screenshots/validation_screenshots/html/entries%20page%20initial%20errors.png) | Most errors from Jinja templating, others from Materialize classes like `col` and `s4`. These can be ignored. Some errors due to syntax which will be fixed. |
+| entries.html | ![screenshot of entries.html with only jinja and materialize errors](/readme-documentation/screenshots/validation_screenshots/html/entries%20page%20syntax%20errors%20fixed.png) | Fixed syntax errors by removing the `em` element in the delete modals and by putting a closing `span` tag where they were missing under the individual tab code for the edit and delete buttons. |
 
 ### CSS
 
