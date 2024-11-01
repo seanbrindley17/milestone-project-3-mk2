@@ -24,6 +24,13 @@ I only used Javascript for JQuery code to initialise Materialize components.
 
 ### Python
 
+To validate my Python code, I used [Pylint](https://pypi.org/project/pylint/) to see problems on the fly and [Black](https://pypi.org/project/black/) to format my Python code automatically upon saving, especially helpful for line breaks. This was all done within my IDE itself
+
+| File | Screenshot | Notes |
+| :---: | :---: | :---: |
+| app.py | ![screenshot of python problems](/readme-documentation/screenshots/validation_screenshots/python/python%20problems.png) | The problems I have got would be what I consider to be totally irrelevant as the functions all work as intended. |
+| env.py | Refer to above screenshot | env.py works as intended. |
+
 ## Browser Compatibility
 
 ## Responsiveness
