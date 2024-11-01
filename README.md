@@ -185,6 +185,7 @@ I used [MongoDB](https://www.mongodb.com/) for my databasing needs. MongoDB is a
 | Edit Entry Form | Allows user to edit an entry and prefills fields to show the entry being edited | ![screenshot of edit entry form](/readme-documentation/screenshots/site_screenshots/edit%20entry%20form.png) |
 | Delete Entry Modal | Pops up when user clicks delete on an entry | ![screenshot of delete modal](/readme-documentation/screenshots/site_screenshots/delete%20modal.png) |
 | Log Out Modal | Pops up when user clicks on Log Out | ![screenshot of logout modal](/readme-documentation/screenshots/site_screenshots/log%20out%20modal.png) |
+| Footer | Sticks to bottom of the page. Contains link to my Github | ![screenshot of footer](/readme-documentation/screenshots/site_screenshots/footer.png) |
 
 ### Future Features
 
