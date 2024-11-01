@@ -6,6 +6,12 @@ Return to [README.md](README.md).
 
 ### HTML
 
+| File | Screenshot | Notes |
+| :---: | :---: | :---: |
+| base.html | ![screenshot of base.html errors](/readme-documentation/screenshots/validation_screenshots/html/base-initial-errors.png) | I have a lot of errors but as shown in the screenshot they're all in some part caused by the Jinja templating which I believe it done correctly. The "text not allowed in ul" error is also due to having Jinja templating there too. |
+| welcome.html | ![screenshot of welcome.html errors](/readme-documentation/screenshots/validation_screenshots/html/welcome%20page%20initial%20errors.png) | All errors apart from one stem from Jinja templating, so I will be ignoring them. Lone actual error from putting a h2 element within a span |
+| welcome.html | ![screenshot of welcome.html with only jinja errors](/readme-documentation/screenshots/validation_screenshots/html/welcome%20page%20h2%20inside%20span%20fixed.png) | Fixed by moving the h2 element outside of the span element. |
+
 ### CSS
 
 | File | Screenshot | Notes |
