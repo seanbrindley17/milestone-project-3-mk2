@@ -2,20 +2,30 @@
 <html lang="en">
 
 <head>
+    <!-- Meta data -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- External Stylesheets -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css">
+    <!-- Materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- Internal Stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    {% block styles %}
-    {% endblock %}
+    
+    <!-- Title -->
     <title>SwimTimes</title>
+
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/static/images/swim-icon.ico">
 </head>
 
@@ -28,10 +38,12 @@
                 <a href="{{ url_for('welcome') }}" class="brand-logo center">SwimTimes</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-circle-chevron-right"></i></a>
                 <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <!-- Links displayed to logged in user -->
                     {% if session.user %}
                         <li><a href="{{ url_for('get_entries') }}">Home <i class="fa-solid fa-water-ladder"></i></a></li>
                         <li><a href="{{ url_for('add_new_entry') }}">Add New Time <i class="fa-solid fa-stopwatch"></i></a></li>
                         <li><a href="#logout-modal" class="modal-trigger">Log Out <i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+                    <!-- Links displayed to user not logged in -->
                     {% else %}
                         <li><a href="{{ url_for('welcome') }}">Welcome <i class="fa-solid fa-water"></i></a></li>
                         <li><a href="{{ url_for('login') }}">Log In <i class="fa-solid fa-door-open"></i></a></li>
@@ -43,11 +55,13 @@
 
         <!-- Mobile collapsible -->
         <ul class="sidenav indigo darken-2 mobile-navbar" id="mobile-demo">
+            <!-- Links displayed to logged in user -->
             {% if session.user %}
                 <li><a href="{{ url_for('get_entries') }}" class="white-text">Home <i class="fa-solid fa-water-ladder"></i></a></li>
                 <li><a href="{{ url_for('add_new_entry') }} " class="white-text">Add New Time <i class="fa-solid fa-stopwatch"></i></a></li>
                 <li><a href="#logout-modal" class="modal-trigger white-text">Log Out <i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
-            {% else %}
+                <!-- Links displayed to user not logged in -->
+                {% else %}
                 <li><a href="{{ url_for('welcome') }}" class="white-text">Welcome <i class="fa-solid fa-water"></i></a></li>
                 <li><a href="{{ url_for('login') }}" class="white-text">Log In <i class="fa-solid fa-door-open"></i></a></li>
                 <li><a href="{{ url_for('register') }}" class="white-text">Register <i class="fa-solid fa-keyboard"></i></a></li>
@@ -81,10 +95,12 @@
         {% endwith %}
     </section>
 
+    <!-- Content injected from other HTML templates -->
     {% block content %}
     {% endblock %}
 
     <div class="">
+        <!-- Footer -->
         <footer class="custom-footer">
             <p>© 2024 Created by Sean Brindley for Milestone Project 3 in CodeInstitute's Web Application Design
                 diploma. <a class="" href="https://github.com/seanbrindley17" target="_blank"><i
@@ -92,12 +108,15 @@
         </footer>
     </div>
 
+    <!-- External Javascript -->
+    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Internal Javascript -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    {% block scripts %}
-    {% endblock %}
 </body>
 
 </html>
