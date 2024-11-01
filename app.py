@@ -5,6 +5,7 @@ from flask import Flask, flash, render_template, redirect, request, session, url
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+
 if os.path.exists("env.py"):
     import env
 
@@ -27,8 +28,11 @@ def get_entries():
         date_time_filter = request.form.get("date-time-filter")
         entries = list(mongo.db.entries.find({"created_by": session["user"]}))
         if distance_filter:
-            entries = list(mongo.db.entries.find(
-                {"created_by": session["user"], "distance": distance_filter}))
+            entries = list(
+                mongo.db.entries.find(
+                    {"created_by": session["user"], "distance": distance_filter}
+                )
+            )
         if date_time_filter == "date-latest":
             entries = sorted(entries, key=lambda entry: entry["date"], reverse=True)
         elif date_time_filter == "date-earliest":
@@ -56,7 +60,8 @@ def welcome():
 def register():
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
-        {"username": request.form.get("username").lower()}) 
+            {"username": request.form.get("username").lower()}
+        )
         if existing_user:
             flash("Username already exists, please try another")
             return redirect(url_for("register"))
@@ -69,7 +74,7 @@ def register():
             "first_name": request.form.get("first_name"),
             "last_name": request.form.get("last_name"),
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
+            "password": generate_password_hash(request.form.get("password")),
         }
         mongo.db.users.insert_one(registered_user)
         session["user"] = request.form.get("username").lower()
@@ -82,9 +87,13 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        existing_user = mongo.db.users.find_one({"username": request.form.get("username").lower()})
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()}
+        )
         if existing_user:
-            if check_password_hash(existing_user["password"], request.form.get("password")):
+            if check_password_hash(
+                existing_user["password"], request.form.get("password")
+            ):
                 display_name = existing_user["first_name"]
                 session["user"] = request.form.get("username").lower()
                 flash(f"Welcome back, {display_name}")
@@ -122,7 +131,7 @@ def add_new_entry():
                 "distance": request.form.get("distance"),
                 "time": race_time,
                 "date": formatted_date,
-                "created_by": session["user"]
+                "created_by": session["user"],
             }
             mongo.db.entries.insert_one(entry)
             flash("Time Added")
@@ -150,7 +159,7 @@ def edit_entry(entry_id):
                 "distance": request.form.get("distance"),
                 "time": race_time,
                 "date": formatted_date,
-                "created_by": session["user"]
+                "created_by": session["user"],
             }
             mongo.db.entries.replace_one({"_id": ObjectId(entry_id)}, edited_entry)
             flash("Entry Edited")
@@ -163,7 +172,15 @@ def edit_entry(entry_id):
     milliseconds = race_time_split_seconds[1]
     strokes = mongo.db.strokes.find()
     distances = mongo.db.distances.find()
-    return render_template("edit_entry.html", entry=entry, strokes=strokes, distances=distances, minutes=minutes, seconds=seconds, milliseconds=milliseconds)
+    return render_template(
+        "edit_entry.html",
+        entry=entry,
+        strokes=strokes,
+        distances=distances,
+        minutes=minutes,
+        seconds=seconds,
+        milliseconds=milliseconds,
+    )
 
 
 # Will delete an entry when called on it.
@@ -176,6 +193,4 @@ def delete_entry(entry_id):
 
 
 if __name__ == "__main__":
-    app.run(host=os.environ.get("IP"),
-            port=int(os.environ.get("PORT")),
-            debug=True)
+    app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=True)
