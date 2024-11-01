@@ -16,6 +16,12 @@ Return to [README.md](README.md).
 
 ### Javascript
 
+I only used Javascript for JQuery code to initialise Materialize components.
+
+| File | Screenshot | Notes |
+| :---: | :---: | :---: |
+| static/js/script.js | ![screenshot of js validation](/readme-documentation/screenshots/validation_screenshots/js/javascript%20validation.png) | One undefined variable which is the JQuery global selector so this is fine. |
+
 ### Python
 
 ## Browser Compatibility
