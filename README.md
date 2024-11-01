@@ -98,6 +98,10 @@ In my site I used icons from [FontAwesome](https://fontawesome.com/) to make my 
 
 * For the mobile collapsible navbar I used [this right arrow icon](https://fontawesome.com/icons/circle-chevron-right?f=classic&s=solid).
 
+### Favicon
+
+I used [this icon](https://www.favicon.cc/?action=icon&file_id=231637) I found on favicon.cc for my Favicon.
+
 ### Technology Used
 
 #### Coding Languages Used
