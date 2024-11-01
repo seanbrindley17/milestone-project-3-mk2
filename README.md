@@ -186,8 +186,22 @@ I used [MongoDB](https://www.mongodb.com/) for my databasing needs. MongoDB is a
 | Delete Entry Modal | Pops up when user clicks delete on an entry | ![screenshot of delete modal](/readme-documentation/screenshots/site_screenshots/delete%20modal.png) |
 | Log Out Modal | Pops up when user clicks on Log Out | ![screenshot of logout modal](/readme-documentation/screenshots/site_screenshots/log%20out%20modal.png) |
 
-
 ### Future Features
+
+There are several things I'd like to have added for further functionality but I either couldn't do it or decided against for complexity's sake.
+
+* I have only included the 4 main swimming strokes for individual events. I have forgone the ability to add Individual Medley times for now.
+    * Futhermore I would add an option to show whether the time was a split time in a relay. About half of my lifetime timed swims have probably come in relays so it would allow me to add much more data. But I wasn't sure how to impliment this.
+
+* May be better if the different distances corresponded to different colours to make them more distinguishable. Again, forgone for complexity reasons. I was happy to get the basic functionality working.
+
+* I would also expand the entry fields to include a location of swim too. I have every single location from where I have recorded a time so it's feasible others do too. Would be interesting to chart on a map too but I wasn't confident enough with APIs to even think about trying it.
+
+* The default display method for entries are new ones are added at the bottom. I would probably prefer to have it so the default display is by latest date, but I had a lot of issues implimenting my date filter so once I got it working for the filters I didn't want to fiddle with it and break it.
+
+* Closing the tab logs the user out, at least it does for me. I'd fix that to not do that because it's quite annoying.
+
+* With further functionality and more data added I could potentially include a profile page where users could access best times or things like that among other things. There's a lot I could implement with further skill and knowledge I would imagine.
 
 ## Testing
 
