@@ -6,6 +6,8 @@ Return to [README.md](README.md).
 
 ### HTML
 
+HTML code was validated using the [W3 Validator](https://validator.w3.org/nu/#textarea) and pasting the code into the text area.
+
 | File | Screenshot | Notes |
 | :---: | :---: | :---: |
 | base.html | ![screenshot of base.html errors](/readme-documentation/screenshots/validation_screenshots/html/base-initial-errors.png) | I have a lot of errors but as shown in the screenshot they're all in some part caused by the Jinja templating which I believe it done correctly. The "text not allowed in ul" error is also due to having Jinja templating there too. |
@@ -21,6 +23,8 @@ Return to [README.md](README.md).
 
 
 ### CSS
+
+CSS code was validated using [W3 Jigsaw](https://jigsaw.w3.org/css-validator/).
 
 | File | Screenshot | Notes |
 | :---: | :---: | :---: |
@@ -47,7 +51,15 @@ To validate my Python code, I used [Pylint](https://pypi.org/project/pylint/) to
 
 ## Browser Compatibility
 
+| Browser | Welcome | Register | Log In | Entries | Add Entry | Edit Entry | Delete | Log Out | Notes |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Chrome | [screenshot of welcome page on chrome](/readme-documentation/screenshots/browser_compatibility/chrome/welcome%20page%20chrome.png) | [screenshot of register page on chrome](/readme-documentation/screenshots/browser_compatibility/chrome/register%20page%20chrome.png) | [screenshot of log in page on chrome](/readme-documentation/screenshots/browser_compatibility/chrome/log%20in%20page%20chrome.png) | [screenshot of entries page on chrome](/readme-documentation/screenshots/browser_compatibility/chrome/entries%20page%20chrome.png) | [screenshot of add entry page on chrome](/readme-documentation/screenshots/browser_compatibility/chrome/add%20entry%20page%20chrome.png) | [screenshot of edit entry page on chrome](/readme-documentation/screenshots/browser_compatibility/chrome/edit%20entry%20page%20chrome.png) | [screenshot of delete modal on chrome](/readme-documentation/screenshots/browser_compatibility/chrome/delete%20modal%20chrome.png) | [screenshot of log out modal on chrome](/readme-documentation/screenshots/browser_compatibility/chrome/log%20out%20modal%20chrome.png) | All pages look as intended |       
+
 ## Responsiveness
+
+| Device | Welcome | Register | Log In | Entries | Add Entry | Edit Entry | Delete | Log Out | Notes |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Acer Aspire 5 Laptop | [screenshot of welcome page on chrome](/readme-documentation/screenshots/browser_compatibility/chrome/welcome%20page%20chrome.png) | [screenshot of register page on chrome](/readme-documentation/screenshots/browser_compatibility/chrome/register%20page%20chrome.png) | [screenshot of log in page on chrome](/readme-documentation/screenshots/browser_compatibility/chrome/log%20in%20page%20chrome.png) | [screenshot of entries page on chrome](/readme-documentation/screenshots/browser_compatibility/chrome/entries%20page%20chrome.png) | [screenshot of add entry page on chrome](/readme-documentation/screenshots/browser_compatibility/chrome/add%20entry%20page%20chrome.png) | [screenshot of edit entry page on chrome](/readme-documentation/screenshots/browser_compatibility/chrome/edit%20entry%20page%20chrome.png) | [screenshot of delete modal on chrome](/readme-documentation/screenshots/browser_compatibility/chrome/delete%20modal%20chrome.png) | [screenshot of log out modal on chrome](/readme-documentation/screenshots/browser_compatibility/chrome/log%20out%20modal%20chrome.png) | No issues. |
 
 ## Accessibility
 
@@ -63,13 +75,15 @@ I didn't run into too many major bugs or issues that took any reasonable time to
 
 * My major issue is the filter sometimes not working, I have absolutely no idea why as the dates are stored the same way sometimes it works and sometimes it doesn't. Searching for a solution throws me ideas that a. don't make sense to me and b. don't work either.
     * The issue seems to be that it's sorting by the day correctly but ignoring month and year.
-        * This was solved by implimenting datetime modules instead of strings, and then re entering the data I had inputted already. The errors appeared to be springing because there were still string inputs so even though I had originally got my code correct I was still getting errors. Once I realised this it was a relatively straightforward fix with a bit of Googling.
+        * This was solved by implimenting datetime modules instead of strings, and then re entering the data I had inputted already. The errors appeared to be springing because there were still string inputs in my entries from previous testing so even though I had originally got my code correct I was still getting errors. Once I realised this it was a relatively straightforward fix with a bit of Googling and removing the original entries.
 
 * Tried to include Materialize's footer on my Welcome page but couldn't get it to work properly and stick to the bottom.
-    * I ended up fixing this by simply attaching the footer content to the card panel underneath the register and log in buttons. 
+    * I ended up fixing this by simply attaching the footer content to the card panel underneath the register and log in buttons.
+        * UPDATE: I tried the footer again but this time didn't use Materialize's own footer, I just used the footer semantic element and a bit of custom styling to get it to stick to the bottom.
 
 * When building the filter feature, I noticed that when I edited an entry it would be filtered separately to the other entries for reasons unclear to me.
     * I believe I fixed this by just simplifying the sorting code I had. Google had told me about datetime and how to convert dates into strings and vice versa so I tried that and it made the issue worse so I removed all that.
+        * UPDATE: As stated above, the issue was because of a mixture of string type dates and datetime type dates. Once I used all datetime dates it worked as expected.
 
 * In my style.css file at the top I've used the global selector `*` to apply my chosen font to all the text. The issue I had was that it wasn't applying to the Materialize selected options in my add and entry entry pages.
     * Again, a good Google search helped to find the exact css code I needed to target to change the font as well as the colour and that I had to use `!important` as well to get the changes to take effect.
