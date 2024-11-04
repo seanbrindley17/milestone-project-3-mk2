@@ -134,7 +134,7 @@ I used [MongoDB](https://www.mongodb.com/) for my databasing needs. MongoDB is a
 
 * [Werkzeug](https://werkzeug.palletsprojects.com/en/stable/) - For password hashing.
 
-* [JQuery]() - To initialize the Materialize components used.
+* [JQuery](https://jquery.com/) - To initialize the Materialize components used.
 
 ##### Software
 
@@ -191,6 +191,8 @@ I used [MongoDB](https://www.mongodb.com/) for my databasing needs. MongoDB is a
 
 There are several things I'd like to have added for further functionality but I either couldn't do it or decided against for complexity's sake.
 
+* For registering and logging in I have specified the the user use a username. If this were an actual website being deployed for it's purpose I would have made it so that email would be instead of username but for the sake of the project I thought it would be easier for test purposes and marking purposes too.
+
 * I have only included the 4 main swimming strokes for individual events. I have forgone the ability to add Individual Medley times for now.
     * Futhermore I would add an option to show whether the time was a split time in a relay. About half of my lifetime timed swims have probably come in relays so it would allow me to add much more data. But I wasn't sure how to impliment this.
 
@@ -200,9 +202,13 @@ There are several things I'd like to have added for further functionality but I 
 
 * The default display method for entries are new ones are added at the bottom. I would probably prefer to have it so the default display is by latest date, but I had a lot of issues implimenting my date filter so once I got it working for the filters I didn't want to fiddle with it and break it.
 
+* When adding an entry, adding a filer or after editing an entry, the tab display will default back to Freestyle. I didn't really have to much time to play around with changing this.
+
 * Closing the tab logs the user out, at least it does for me. I'd fix that to not do that because it's quite annoying.
 
 * With further functionality and more data added I could potentially include a profile page where users could access best times or things like that among other things. There's a lot I could implement with further skill and knowledge I would imagine.
+
+* I didn't add an admin page as I didn't deem it necessary for the time being. In the future I will add one where the admin profile can access a page called "users" or "profiles" and be able to see entries a particular user has created.
 
 ## Testing
 
