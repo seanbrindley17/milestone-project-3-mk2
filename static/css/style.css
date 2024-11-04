@@ -39,7 +39,7 @@ body {
 .custom-footer {
     position: absolute;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
 }
 
 .custom-footer p {
