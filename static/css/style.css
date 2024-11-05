@@ -17,6 +17,10 @@ body {
 /* Navbar
 -------------------------------------------------------------------- */
 
+.page-title {
+    margin: 0;
+}
+
 .mobile-navbar li {
     padding-top: 2rem;
 }
