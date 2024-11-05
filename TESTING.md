@@ -72,6 +72,10 @@ I tested responsiveness using my own laptop and by simulating devices using Chro
 
 ## Accessibility
 
+| Page | Summary | Details | Contrast | Notes |
+| :---: | :---: | :---: | :---: | :---: |
+| welcome.html | ![screenshot of welcome page summary](/readme-documentation/screenshots/accessibility/welcome/summary.png) | ![screenshot of welcome page details](/readme-documentation/screenshots/accessibility/welcome/initial.png) | ![screenshot of welcome page contrast](/readme-documentation/screenshots/accessibility/welcome/contrast.png) | Two errors for empty links, but they're not empty they use icons so this can be disregarded. The contrast errors I don't agree with and I'm not changing because I think black text would look worse. Alert for having a h4 in my delete modal, changed to h2 as this will mean more consistency across the site. |
+
 ## Lighthouse Audit
 
 ## User Story Testing
