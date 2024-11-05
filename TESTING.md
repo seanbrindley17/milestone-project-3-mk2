@@ -84,7 +84,7 @@ I tested responsiveness using my own laptop and by simulating devices using Chro
 | As a returning user I want to be able to log in to my account and view my entries created previously. | ![screenshot of user logging back in](/readme-documentation/screenshots/user_stories/user-logging-back-in.png) ![screenshot of welcome back user](/readme-documentation/screenshots/user_stories/user-welcome-back.png) |
 | As a returning user I want to be able to create more entries. | ![screenshot of user creating another entry](/readme-documentation/screenshots/user_stories/user-adding-older-time.png) ![screenshot of user creating a 50m entry](/readme-documentation/screenshots/user_stories/user-adding-50m-time.png) |
 | As a returning user I want to be able to edit entries. | ![screenshot of user editing entry](/readme-documentation/screenshots/user_stories/user-editing-entry.png) ![screenshot of entry edited](/readme-documentation/screenshots/user_stories/entry-edited.png) |
-| As a returning user I want to be able to delete entries. |
+| As a returning user I want to be able to delete entries. | ![screenshot of user input mistake](/readme-documentation/screenshots/user_stories/user-mistake.png) ![screenshot of delete modal](/readme-documentation/screenshots/user_stories/delete-modal.png) ![screenshot of deleted](/readme-documentation/screenshots/user_stories/deleted.png) |
 | As a returning user I want to be able to use the filter to filter my entries to the search criterea chosen. | ![screenshot of 100m filter selected](/readme-documentation/screenshots/user_stories/filter-100m.png) ![screenshot of entries filtered by 100m](/readme-documentation/screenshots/user_stories/entries-filtered-100m.png) |
 
 
