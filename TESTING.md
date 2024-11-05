@@ -76,6 +76,19 @@ I tested responsiveness using my own laptop and by simulating devices using Chro
 
 ## User Story Testing
 
+| User Story | Screenshot |
+| :---: | :---: |
+| As a first time user I want to understand what the site is for. | ![screenshot of welcome page](/readme-documentation/screenshots/browser_compatibility/chrome/welcome%20page%20chrome.png) |
+| As a first time user I want to be able to quickly and easily register for an account. | ![screenshot of new user registering](/readme-documentation/screenshots/user_stories/register.png) ![screenshot of registration successful](/readme-documentation/screenshots/user_stories/registration-successful.png) |
+| As a first time user I want to easily be able to add entries and see them on my home page. | ![screenshot of user adding time](/readme-documentation/screenshots/user_stories/add-time.png) ![screenshot of time added](/readme-documentation/screenshots/user_stories/time-added-successful.png) |
+| As a returning user I want to be able to log in to my account and view my entries created previously. | ![screenshot of user logging back in](/readme-documentation/screenshots/user_stories/user-logging-back-in.png) ![screenshot of welcome back user](/readme-documentation/screenshots/user_stories/user-welcome-back.png) |
+| As a returning user I want to be able to create more entries. | ![screenshot of user creating another entry](/readme-documentation/screenshots/user_stories/user-adding-older-time.png) ![screenshot of user creating a 50m entry](/readme-documentation/screenshots/user_stories/user-adding-50m-time.png) |
+| As a returning user I want to be able to edit entries. | ![screenshot of user editing entry](/readme-documentation/screenshots/user_stories/user-editing-entry.png) ![screenshot of entry edited](/readme-documentation/screenshots/user_stories/entry-edited.png) |
+| As a returning user I want to be able to delete entries. |
+| As a returning user I want to be able to use the filter to filter my entries to the search criterea chosen. | ![screenshot of 100m filter selected](/readme-documentation/screenshots/user_stories/filter-100m.png) ![screenshot of entries filtered by 100m](/readme-documentation/screenshots/user_stories/entries-filtered-100m.png) |
+
+
+
 ## Defensive Programming
 
 ## Bugs/Issues
