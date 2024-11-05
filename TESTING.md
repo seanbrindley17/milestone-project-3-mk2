@@ -122,3 +122,6 @@ I didn't run into too many major bugs or issues that took any reasonable time to
 * The Materialize date picker does not work very well on mobile devices.
 
 * I couldn't work out how to make it so the flash() messages have something for the user to click on to get rid of them.
+
+* I noticed that the delete function was only deleting the top entry regardless of which entry I clicked on. I assume this is due to the delete modal not actually targetting the correct entry and therefore only getting the top entry. I will try and fix this by using the `._id` of entries.
+    * As expected, by adding `._id` to the modal's ID instead of the generic `delete-modal-1` I had before, I essentially make a unique modal for each entry which displays properly.

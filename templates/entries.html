@@ -55,14 +55,14 @@
                             <span class="entry-details white-text center-align col s7 m4">{{ entry.distance }} <span class="entry-stroke">{{ entry.stroke.upper() }}:</span> {{ entry.time }}</span>
                             <span class="entry-buttons right col s12 m4">
                                 <a href="{{ url_for('edit_entry', entry_id=entry._id) }}" class="edit-entry-button btn-small blue darken-1">Edit</a>
-                                <a href="#delete-modal1" class="modal-trigger delete-button btn-small cyan darken-3">Delete</a>
+                                <a href="#delete-modal-{{ entry._id }}" class="modal-trigger delete-button btn-small cyan darken-3">Delete</a>
                             </span>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Delete confirmation box modal -->
-            <div id="delete-modal1" class="modal">
+            <div id="delete-modal-{{ entry._id }}" class="modal">
                 <div class="modal-content center-align">
                     <h4>Delete Entry</h4>
                     <p>Are you sure you wish to delete this entry:</p>
@@ -92,14 +92,14 @@
                                     }}</span>
                                 <span class="entry-buttons right">
                                     <a href="{{ url_for('edit_entry', entry_id=entry._id) }}" class="edit-entry-button btn-small blue darken-1">Edit</a>
-                                    <a href="#delete-modal2" class="modal-trigger delete-button btn-small cyan darken-3">Delete</a>
+                                    <a href="#delete-modal-{{ entry._id }}" class="modal-trigger delete-button btn-small cyan darken-3">Delete</a>
                                 </span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Delete confirmation box modal -->
-                <div id="delete-modal2" class="modal">
+                <div id="delete-modal-{{ entry._id }}" class="modal">
                     <div class="modal-content center-align">
                         <h4>Delete Entry</h4>
                         <p>Are you sure you wish to delete this entry:</p>
@@ -129,14 +129,14 @@
                                     }}</span>
                                 <span class="entry-buttons right">
                                     <a href="{{ url_for('edit_entry', entry_id=entry._id) }}" class="edit-entry-button btn-small blue darken-1">Edit</a>
-                                    <a href="#delete-modal3" class="modal-trigger delete-button btn-small cyan darken-3">Delete</a>
+                                    <a href="#delete-modal-{{ entry._id }}" class="modal-trigger delete-button btn-small cyan darken-3">Delete</a>
                                 </span>
                             </div>
                         </div>
                         </div>
                 </div>
                 <!-- Delete confirmation box modal -->
-                <div id="delete-modal3" class="modal">
+                <div id="delete-modal-{{ entry._id }}" class="modal">
                     <div class="modal-content center-align">
                         <h4>Delete Entry</h4>
                         <p>Are you sure you wish to delete this entry:</p>
@@ -166,14 +166,14 @@
                                     }}</span>
                                 <span class="entry-buttons right">
                                     <a href="{{ url_for('edit_entry', entry_id=entry._id) }}" class="edit-entry-button btn-small blue darken-1">Edit</a>
-                                    <a href="#delete-modal4" class="modal-trigger delete-button btn-small cyan darken-3">Delete</a>
+                                    <a href="#delete-modal-{{ entry._id }}" class="modal-trigger delete-button btn-small cyan darken-3">Delete</a>
                                 </span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Delete confirmation box modal -->
-                <div id="delete-modal4" class="modal">
+                <div id="delete-modal-{{ entry._id }}" class="modal">
                     <div class="modal-content center-align">
                         <h4>Delete Entry</h4>
                         <p>Are you sure you wish to delete this entry:</p>
