@@ -89,6 +89,9 @@ I didn't run into too many major bugs or issues that took any reasonable time to
 * I encountered this error shown below when I tried to add a new entry, this was after I cleaned up the white space and indenting of my code so potentially I did something wrong there.
 ![screenshot of server error for adding entry](/readme-documentation/screenshots/general/add_entry_error.png)
 
+    * The error was due to me having put square brackets around the `"swim_date"` instead of normal brackets. Fixed:
+    ![screenshot of what i changed to fix add entry error](/readme-documentation/screenshots/general/add%20entry%20error%20fix.png)
+
 * Tried to include Materialize's footer on my Welcome page but couldn't get it to work properly and stick to the bottom.
     * I ended up fixing this by simply attaching the footer content to the card panel underneath the register and log in buttons.
         * UPDATE: I tried the footer again but this time didn't use Materialize's own footer, I just used the footer semantic element and a bit of custom styling to get it to stick to the bottom.

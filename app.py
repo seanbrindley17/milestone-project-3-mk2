@@ -124,8 +124,8 @@ def add_new_entry():
             seconds = request.form.get("seconds")
             milliseconds = request.form.get("milliseconds")
             race_time = minutes + ":" + seconds + "." + milliseconds
-            date_str = request.form.get["swim_date"]
-            formatted_date = datetime.strptime(date_str, "%d %B, %Y")
+            date = request.form.get("swim_date")
+            formatted_date = datetime.strptime(date, "%d %B, %Y")
             entry = {
                 "stroke": request.form.get("stroke_name"),
                 "distance": request.form.get("distance"),
@@ -152,8 +152,8 @@ def edit_entry(entry_id):
             seconds = request.form.get("seconds")
             milliseconds = request.form.get("milliseconds")
             race_time = minutes + ":" + seconds + "." + milliseconds
-            date_str = request.form.get("swim_date")
-            formatted_date = datetime.strptime(date_str, "%d %B, %Y")
+            date = request.form.get("swim_date")
+            formatted_date = datetime.strptime(date, "%d %B, %Y")
             edited_entry = {
                 "stroke": request.form.get("stroke_name"),
                 "distance": request.form.get("distance"),
