@@ -97,8 +97,17 @@ I tested responsiveness using my own laptop and by simulating devices using Chro
 | As a returning user I want to be able to use the filter to filter my entries to the search criterea chosen. | ![screenshot of 100m filter selected](/readme-documentation/screenshots/user_stories/filter-100m.png) ![screenshot of entries filtered by 100m](/readme-documentation/screenshots/user_stories/entries-filtered-100m.png) |
 
 
-
 ## Defensive Programming
+
+| Page | Expectation | Test | Result | Fix | Screenshot |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| welcome.html | This page is expected to appear for a user who is not logged in. You should not be able to see the welcome page if you're logged in | While logged in, I clicked the home link within the title and it returned me to the Entries page, not the Welcome page | It behaved as expected | Test Passed | ![screenshot of entries page](/readme-documentation/screenshots/browser_compatibility/chrome/entries%20page%20chrome.png) |
+| welcome.html | The register page is supposed to show up when either register button is clicked. | I clicked on both the register buttons and they both took me to the register page. | It behaved as expected, register page was deplayed | Test Passed | ![screenshot of register page](/readme-documentation/screenshots/browser_compatibility/chrome/register%20page%20chrome.png) |
+| welcome.html | The login page is supposed to show up when either login button is clicked. | I clicked both the log in buttons and they both took me to the log in page. | It behaved as expected, the log in page was displayed | Test Passed | ![screenshot of log in page](/readme-documentation/screenshots/browser_compatibility/chrome/log%20in%20page%20chrome.png) |
+| register.html | If a user tries to create a profile with the same username as one that has already created, an alert will be thrown and the user will not be allowed to create the account. | I tried to create an account with a username that I already knew existed. | It behaved as expected, an alert was thrown. | Test Passed | ![screenshot of username alert](/readme-documentation/screenshots/defensive/username-exists.png) |
+| register.html | When creating an account password, if the confirm password does not match the password then an alert should be thrown and the user redirected back to the register form to start again. | Tested by purposefully inputting two different passwords in the password input fields. | It behaved as expected, an alert was thrown | Test Passed | ![screenshot of password alert](/readme-documentation/screenshots/defensive/password-not-match.png) |
+| login.html | When trying to log in, if the user inputs an username or password that is incorrect, a not-specific error should be thrown and the user should be redirected to the log in form to try again | Tested by purposefully inputting an incorrect username and correct password, then a correct username and incorrect password. | It behaved as expected, the alert message was the same. | Test Passed | ![screenshot of incorrect username or password alert](/readme-documentation/screenshots/defensive/incorrect-username-or-password.png) |
+
 
 ## Bugs/Issues
 
