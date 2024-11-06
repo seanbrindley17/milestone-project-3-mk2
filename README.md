@@ -1,4 +1,4 @@
-# Milestone Project 3
+# Milestone Project 3 - SwimTimes
 
 https://milestone-project-3-sb2-855f59c8cfc4.herokuapp.com/
 
