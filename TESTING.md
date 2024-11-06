@@ -83,6 +83,18 @@ I tested responsiveness using my own laptop and by simulating devices using Chro
 
 ## Lighthouse Audit
 
+### Desktop
+
+| Page | Screenshot | Notes |
+| :---: | :---: | :---: |
+| Welcome | ![screenshot of lighthouse audit desktop welcome](/readme-documentation/screenshots/lighthouse/desktop/welcome.png) | Fine |
+| Register | ![screenshot of register lighthouse audit desktop](/readme-documentation/screenshots/lighthouse/desktop/register.png) | Fine |
+| Log In | ![screenshot of log in lighthouse audit desktop](/readme-documentation/screenshots/lighthouse/desktop/login.png) | Fine |
+| Entries | ![screenshot of entries lighthouse audit desktop](/readme-documentation/screenshots/lighthouse/desktop/entries.png) | Slightly lower on accessibility than I might have liked. |
+| Add New Entry | ![screenshot of new entry light house audit desktop](/readme-documentation/screenshots/lighthouse/desktop/add-entry.png) | Slightly lower on accessibility than I might have liked. |
+| Edit Entry | ![screenshot of edit entry lighthouse audit desktop](/readme-documentation/screenshots/lighthouse/desktop/edit-entry.png) | Slightly lower on accessibility than I might have liked. |
+
+
 ## User Story Testing
 
 | User Story | Screenshot |
