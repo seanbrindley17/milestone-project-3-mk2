@@ -72,6 +72,8 @@ I tested responsiveness using my own laptop and by simulating devices using Chro
 
 ## Accessibility
 
+I used the [Wave](https://wave.webaim.org/) web accessibility evaluation tool to test my pages' accessibility. 
+
 | Page | Summary | Details | Contrast | Notes |
 | :---: | :---: | :---: | :---: | :---: |
 | welcome.html | ![screenshot of welcome page summary](/readme-documentation/screenshots/accessibility/welcome/summary.png) | ![screenshot of welcome page details](/readme-documentation/screenshots/accessibility/welcome/initial.png) | ![screenshot of welcome page contrast](/readme-documentation/screenshots/accessibility/welcome/contrast.png) | Two errors for empty links, but they're not empty they use icons so this can be disregarded. The contrast errors I don't agree with and I'm not changing because I think black text on the buttons that are throwing the error would look worse. Alert for having a h4 in my delete modal, changed to h2 as this will mean more consistency across the site, and other alert for adjacent links going to the same place is moot because it's detecting my navbar and mobile navbar, which will never be visible at the same time. |
@@ -82,6 +84,8 @@ I tested responsiveness using my own laptop and by simulating devices using Chro
 | edit_entry.html | ![screenshot of edit entry page summary](/readme-documentation/screenshots/accessibility/edit_entry/summary.png) | ![screenshot of edit entry page details](/readme-documentation/screenshots/accessibility/edit_entry/details.png) | ![screenshot of edit entry page contrast](/readme-documentation/screenshots/accessibility/edit_entry/contrast.png) | Two errors for empty links, but they're not empty they use icons so this can be disregarded. Two errors for labels being missing for the Materialize select stuff but it doesn't work, the label is for the select stuff. The contrast errors I don't agree with and I'm not changing because I think black text on the buttons that are throwing the error would look worse. Nothing will be changed. |
 
 ## Lighthouse Audit
+
+I used the Lighthouse auditing tool within Chrome Dev Tools to audit my site's pages.
 
 ### Desktop
 
@@ -94,6 +98,16 @@ I tested responsiveness using my own laptop and by simulating devices using Chro
 | Add New Entry | ![screenshot of new entry light house audit desktop](/readme-documentation/screenshots/lighthouse/desktop/add-entry.png) | Slightly lower on accessibility than I might have liked. |
 | Edit Entry | ![screenshot of edit entry lighthouse audit desktop](/readme-documentation/screenshots/lighthouse/desktop/edit-entry.png) | Slightly lower on accessibility than I might have liked. |
 
+### Mobile
+
+| Page | Screenshot | Notes |
+| :---: | :---: | :---: |
+| Welcome | ![screenshot of welcome lighthouse audit mobile](/readme-documentation/screenshots/lighthouse/mobile/welcome.png) | Acceptable |
+| Register | ![screenshot of register lighthouse audit mobile](/readme-documentation/screenshots/lighthouse/mobile/register.png) | Acceptable |
+| Log In | ![screensho of log in lighthouse audit mobile](/readme-documentation/screenshots/lighthouse/mobile/login.png) | Acceptable |
+| Entries | ![screenshot of entries lighthouse audit mobile](/readme-documentation/screenshots/lighthouse/mobile/entries.png) | Lower accessibility than expected. |
+| Add New Entry | ![screenshot of add entry lighthouse audit mobile](/readme-documentation/screenshots/lighthouse/mobile/add-entry.png) | Accessibility lower than expected but not dangerously low. |
+| Edit Entry | ![screenshot of edit entry lighthouse audit mobile](/readme-documentation/screenshots/lighthouse/mobile/edit-entry.png) | Accessibility lower than expected but not dangerously low. |
 
 ## User Story Testing
 
