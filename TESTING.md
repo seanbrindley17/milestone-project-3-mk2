@@ -183,3 +183,11 @@ I didn't run into too many major bugs or issues that took any reasonable time to
 
 * I noticed that the delete function was only deleting the top entry regardless of which entry I clicked on. I assume this is due to the delete modal not actually targetting the correct entry and therefore only getting the top entry. I will try and fix this by using the `._id` of entries.
     * As expected, by adding `._id` to the modal's ID instead of the generic `delete-modal-1` I had before, I essentially make a unique modal for each entry which displays properly.
+
+* When I went to use Am I Responsive to simulate my responsiveness, I found that I couldn't log on and it would just give me a server error due to the session user thing I was using.
+    * I avoided the error but adding a little bit to the get_entries() function to redirect back to log in page if a user is not in a session. I'm not sure how to solve this completely and as it's only affecting external tools it doesn't have any impact on the assessment so I decided to simply leave as is and see if I can solve it another time. A user can still log in on the site as normal.
+![screenshot of am i responsive with server error](/readme-documentation/screenshots/general/am-i-responsive-server-error.png)
+
+---
+
+Return to [README.md](README.md)
