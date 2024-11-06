@@ -23,6 +23,9 @@ mongo = PyMongo(app)
 # Shows the user the entries created by them by matching the username to the session user cookie
 @app.route("/get_entries", methods=["GET", "POST"])
 def get_entries():
+    if "user" not in session:
+        flash("Log in to view entries.")
+        return redirect(url_for("login"))
     if request.method == "POST":
         distance_filter = request.form.get("distance-filter")
         date_time_filter = request.form.get("date-time-filter")
@@ -97,6 +100,7 @@ def login():
                 display_name = existing_user["first_name"]
                 session["user"] = request.form.get("username").lower()
                 flash(f"Welcome back, {display_name}")
+                flash("Session set successfully")
                 return redirect(url_for("get_entries"))
             flash("Incorrect username or password")
             return redirect(url_for("login"))
